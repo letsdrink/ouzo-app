@@ -1,4 +1,4 @@
-ouzo-app
-========
+Ouzo - Application
+==================
 
-Ouzo framework application skeleton
+Ouzo application skeleton.
