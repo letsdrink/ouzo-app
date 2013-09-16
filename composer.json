@@ -1,5 +1,5 @@
 {
-    "name": "letsdrink/ouzo/app",
+    "name": "letsdrink/ouzo-app",
     "description": "Ouzo framework application skeleton",
     "minimum-stability": "dev",
     "license": "MIT",
@@ -12,11 +12,5 @@
     "require": {
         "letsdrink/ouzo": "dev-master",
         "ruckusing/ruckusing-migrations": "dev-master#d8b1e73"
-    },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/letsdrink/ouzo"
-        }
-    ]
+    }
 }
