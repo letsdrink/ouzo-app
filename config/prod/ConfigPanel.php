@@ -9,5 +9,6 @@ $config['global']['controller'] = 'hello_world';
 $config['global']['action'] = 'index';
 $config['global']['prefix_system'] = '/framework-skeleton';
 $config['debug'] = true;
+$config['sql_dialect'] = '\\Ouzo\\Db\\Dialect\\PostgresDialect';
 
 return $config;

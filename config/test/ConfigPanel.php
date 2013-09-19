@@ -8,5 +8,6 @@ $config['db']['port'] = '';
 $config['global']['controller'] = 'hello_world';
 $config['global']['action'] = 'index';
 $config['global']['prefix_system'] = '';
+$config['sql_dialect'] = '\\Ouzo\\Db\\Dialect\\PostgresDialect';
 
 return $config;
