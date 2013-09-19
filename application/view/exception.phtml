@@ -27,7 +27,7 @@
         width: 95%
     }
 </style>
-<? if (\Ouzo\Config::load()->getConfig('debug')): ?>
+<? if (\Ouzo\Config::getValue('debug')): ?>
     <div id="errorTrace">
         <p id="message">Message: <strong><?php echo $errorMessage; ?></strong></p>
         <hr/>

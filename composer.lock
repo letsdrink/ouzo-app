@@ -3,26 +3,21 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "eb711fec91e5beedf4df4cd68e36117c",
+    "hash": "ddd42ea359c3bcc6d941ea8f81e7b0c5",
     "packages": [
         {
             "name": "letsdrink/ouzo",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/letsdrink/ouzo",
-                "reference": "261d6ba49e5ecd1a43c7cc19a224f7dcc520c89a"
+                "url": "https://github.com/letsdrink/ouzo.git",
+                "reference": "7fa86addd617081ab9d386d82150d2e41fa95dd9"
             },
-            "archive": {
-                "exclude": [
-                    "/test",
-                    "/build",
-                    "/config",
-                    "/vendor",
-                    "/*.xml",
-                    "/*.sh",
-                    "/bootstrap_test.php"
-                ]
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/7fa86addd617081ab9d386d82150d2e41fa95dd9",
+                "reference": "7fa86addd617081ab9d386d82150d2e41fa95dd9",
+                "shasum": ""
             },
             "require-dev": {
                 "phpunit/phpunit": "3.7.19"
@@ -33,6 +28,7 @@
                     "Ouzo": "lib/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -44,13 +40,13 @@
             ],
             "description": "Ouzo PHP MVC framework",
             "keywords": [
+                "TDD",
                 "framework",
                 "mvc",
                 "orm",
-                "php",
-                "tdd"
+                "php"
             ],
-            "time": "2013-09-16 14:36:32"
+            "time": "2013-09-19 11:16:40"
         },
         {
             "name": "ruckusing/ruckusing-migrations",
