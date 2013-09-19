@@ -1,5 +1,5 @@
 <?
-if (\Ouzo\Config::load()->getConfig('debug')) {
+if (\Ouzo\Config::getValue('debug')) {
     ?>
     <div style="clear: both; padding: 50px; border: 1px; background-color: #ffffee; color: #000000">
         <a href="#stats" onclick="reloadStats()">Click to refresh</a>
