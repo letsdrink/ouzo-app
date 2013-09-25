@@ -6,7 +6,7 @@ define('ROOT_PATH', realpath(dirname(__FILE__)) . DIRECTORY_SEPARATOR);
 
 require 'vendor/autoload.php';
 
-include_once ROOT_PATH . 'application/routes.php';
+include_once ROOT_PATH . 'config/routes.php';
 
 $loader = new \Ouzo\Loader();
 $loader
