@@ -11,6 +11,6 @@
     ],
     "require": {
         "letsdrink/ouzo": "dev-master",
-        "ruckusing/ruckusing-migrations": "dev-master#d8b1e73"
+        "ruckusing/ruckusing-migrations": "dev-master"
     }
 }
