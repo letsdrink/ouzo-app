@@ -13,7 +13,7 @@ $loader
     ->setIncludePath('application/')
     ->setIncludePath('lib/')
     ->setIncludePath('seed/')
-    ->setIncludePath('vendor/bin/')
+    ->setIncludePath('vendor/letsdrink/ouzo/bin/')
     ->register();
 
 \Ouzo\Shell\Dispatcher::runScript($argv);
