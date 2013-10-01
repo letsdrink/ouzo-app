@@ -1,7 +1,12 @@
 <?php
 class Pl
 {
-    static $labels = array();
+    static $labels = array(
+        'user' => array(
+            'login' => 'login',
+            'password' => 'password'
+        )
+    );
 
     static function getLabels()
     {

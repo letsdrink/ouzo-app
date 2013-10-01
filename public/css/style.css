@@ -1,6 +1,6 @@
 body {
     background: url("../images/bg.png");
-    text-align: center;
+
     font-family: Verdana, serif;
 }
 
@@ -8,6 +8,7 @@ header {
     margin-top: 100px;
     margin-bottom: 100px;
     border-bottom: 1px inset #5B313F;
+    text-align: center;
 }
 
 h1 {
@@ -20,4 +21,15 @@ div.content {
     margin: 30px;
     padding: 30px;
     border: 1px solid;
+}
+
+.form label {
+    display: block;
+    width: 100px;
+    float: left;
+    margin-top: 2px;
+}
+
+fieldset.new-user {
+    width: 400px;
 }

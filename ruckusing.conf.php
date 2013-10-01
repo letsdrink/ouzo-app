@@ -11,15 +11,6 @@ return array(
             'user' => $config['db']['user'],
             'password' => $config['db']['pass'],
             'directory' => ''
-        ),
-        'test' => array(
-            'type' => $config['db']['driver'],
-            'host' => $config['db']['host'],
-            'port' => $config['db']['port'],
-            'database' => $config['db']['dbname'],
-            'user' => $config['db']['user'],
-            'password' => $config['db']['pass'],
-            'directory' => ''
         )
     ),
     'migrations_dir' => array('default' => RUCKUSING_WORKING_BASE . DIRECTORY_SEPARATOR . 'db/migrations'),

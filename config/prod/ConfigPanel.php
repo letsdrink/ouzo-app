@@ -1,13 +1,13 @@
 <?php
-$config['db']['dbname'] = '';
-$config['db']['user'] = '';
+$config['db']['dbname'] = 'app';
+$config['db']['user'] = 'thulium_1';
 $config['db']['pass'] = '';
-$config['db']['driver'] = '';
-$config['db']['host'] = '';
-$config['db']['port'] = '';
+$config['db']['driver'] = 'pgsql';
+$config['db']['host'] = '127.0.0.1';
+$config['db']['port'] = '5432';
 $config['global']['controller'] = 'hello_world';
 $config['global']['action'] = 'index';
-$config['global']['prefix_system'] = '/framework-skeleton';
+$config['global']['prefix_system'] = '/ouzo-test';
 $config['debug'] = true;
 $config['sql_dialect'] = '\\Ouzo\\Db\\Dialect\\PostgresDialect';
 

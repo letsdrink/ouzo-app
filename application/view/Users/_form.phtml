@@ -1,0 +1,26 @@
+<?= showErrors($this->user->getErrors()); ?>
+
+<fieldset class="new-user">
+    <legend>New user</legend>
+    <? $form = formFor($this->user, 'customer', array('auto_labels' => false)); ?>
+    <?= $form->start($this->url, 'post', array('class' => 'form')) ?>
+
+    <div>
+        <?= $form->label('login') ?>
+        <?= $form->textField('login') ?>
+    </div>
+
+    <div>
+        <?= $form->label('password') ?>
+        <?= $form->passwordField('password') ?>
+    </div>
+
+    <input type="submit" name="save" id="save" value="Save"/>
+
+    <?= $form->end() ?>
+
+</fieldset>
+
+
+
+

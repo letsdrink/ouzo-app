@@ -13,12 +13,16 @@ require 'vendor/autoload.php';
 require_once ROOT_PATH . 'vendor/letsdrink/ouzo/lib/Ouzo/Loader.php';
 require_once ROOT_PATH . 'vendor/letsdrink/ouzo/lib/Ouzo/FrontController.php';
 require_once ROOT_PATH . 'vendor/letsdrink/ouzo/lib/Ouzo/Error.php';
+$routesFilename = ROOT_PATH . 'config/routes.php';
+
+if (file_exists($routesFilename)) {
+    include_once $routesFilename;
+}
 
 $loader = new \Ouzo\Loader();
 $loader
     ->setIncludePath('custom/')
     ->setIncludePath('application/')
-    ->setIncludePath('vendor/thulium/framework/lib/')
     ->setIncludePath('locales/')
     ->setIncludePath('test/application/')
     ->setIncludePath('test/seed/')

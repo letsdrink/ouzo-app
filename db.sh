@@ -1,3 +1,7 @@
 #!/bin/bash
-export environment=prod
+
+if [ -z "$environment" ]; then
+    export environment=prod
+fi
+
 php vendor/bin/ruckus.php $@
