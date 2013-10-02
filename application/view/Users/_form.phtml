@@ -1,10 +1,10 @@
 <?= showErrors($this->user->getErrors()); ?>
 
 <div class="panel panel-default">
-    <div class="panel-heading">New user</div>
+    <div class="panel-heading"><?= $this->title?></div>
     <div class="panel-body">
         <? $form = formFor($this->user, 'customer', array('auto_labels' => false)); ?>
-        <?= $form->start($this->url, 'post', array('class' => 'form-horizontal')) ?>
+        <?= $form->start($this->url, $this->method, array('class' => 'form-horizontal')) ?>
 
         <div class="form-group">
             <?= $form->label('login', array('class' => 'control-label col-lg-2')) ?>

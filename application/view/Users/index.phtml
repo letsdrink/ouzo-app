@@ -15,8 +15,8 @@
             <tbody>
             <? foreach ($this->users as $index => $user): ?>
                 <tr>
-                    <td><?= $index ?></td>
-                    <td><?= $user->login ?></td>
+                    <td><?= linkTo($index, showUserPath($user))  ?></td>
+                    <td><?= linkTo($user->login, showUserPath($user))  ?></td>
                 </tr>
             <? endforeach ?>
             </tbody>

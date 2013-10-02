@@ -22,7 +22,7 @@ class UsersControllerTest extends ControllerTestCase
     /**
      * @test
      */
-    public function shouldRenderFreshWhenValidationErrorInCreate()
+    public function shouldRenderFreshWhenValidationFailedInCreate()
     {
         //when
         $this->post('/users', array('user' => array(
@@ -59,5 +59,70 @@ class UsersControllerTest extends ControllerTestCase
 
         //then
         $this->assertNotNull(User::where(array('login' => 'login'))->fetch());
+    }
+
+    /**
+     * @test
+     */
+    public function shouldRenderEditWhenValidationFailedInUpdate()
+    {
+        $user = User::create(array('login' => 'login'));
+
+        //when
+        $this->put("/users/{$user->id}", array('user' => array(
+            'login' => ''
+        )));
+
+        //then
+        $this->assertRenders('Users/edit');
+    }
+
+    /**
+     * @test
+     */
+    public function shouldRedirectToShowOnSuccessInUpdate()
+    {
+        //given
+        $user = User::create(array('login' => 'login'));
+
+        //when
+        $this->put("/users/{$user->id}", array('user' => array(
+            'login' => 'new login'
+        )));
+
+        //then
+        $this->assertRedirectsTo(showUserPath($user));
+    }
+
+    /**
+     * @test
+     */
+    public function shouldUpdateUser()
+    {
+        //given
+        $user = User::create(array('login' => 'login'));
+
+        //when
+        $this->put("/users/{$user->id}", array('user' => array(
+            'login' => 'new login'
+        )));
+
+        //then
+        $this->assertEquals('new login', $user->reload()->login);
+    }
+
+    /**
+     * @test
+     */
+    public function shouldShowUser()
+    {
+        //given
+        $user = User::create(array('login' => 'login'));
+
+        //when
+        $this->get("/users/{$user->id}");
+
+        //then
+        $this->assertRenders('Users/show');
     }
 }

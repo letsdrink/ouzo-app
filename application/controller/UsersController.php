@@ -23,6 +23,12 @@ class UsersController extends Controller
         $this->view->render();
     }
 
+    public function show()
+    {
+        $this->view->user = User::findById($this->params['id']);
+        $this->view->render();
+    }
+
     public function create()
     {
         $user = new User($this->params['user']);
@@ -32,6 +38,24 @@ class UsersController extends Controller
         } else {
             $this->view->user = $user;
             $this->view->render('Users/fresh');
+        }
+    }
+
+    public function edit()
+    {
+        $this->view->user = User::findById($this->params['id']);
+        $this->view->render();
+    }
+
+    public function update()
+    {
+        $user = User::findById($this->params['id']);
+        if ($user->updateAttributes($this->params['user'])) {
+            $user->update();
+            $this->redirect(showUserPath($user), "User updated");
+        } else {
+            $this->view->user = $user;
+            $this->view->render('Users/edit');
         }
     }
 }
