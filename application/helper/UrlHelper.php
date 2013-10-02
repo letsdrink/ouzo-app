@@ -1,22 +1,25 @@
 <?php
-
-function usersPath() {
+function usersPath()
+{
     return url(array('string' => '/users'));
 }
 
-function addUserPath() {
+function addUserPath()
+{
     return url(array('string' => '/users/fresh'));
 }
 
-function showUserPath($user) {
+function showUserPath($user)
+{
     return url(array('string' => "/users/{$user->id}"));
 }
 
-function editUserPath($user) {
+function editUserPath($user)
+{
     return url(array('string' => "/users/{$user->id}/edit"));
 }
 
-function updateUserPath($user) {
+function updateUserPath($user)
+{
     return url(array('string' => "/users/{$user->id}"));
 }
-
