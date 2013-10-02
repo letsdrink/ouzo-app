@@ -1,6 +1,6 @@
 <?= renderPartial('Users/_form', array(
     'user' => $this->user,
-    'url' => updateUserPath($this->user),
+    'url' => userPath($this->user->id),
     'method' => 'PUT',
     'title' => 'Edit user'
 ))?>

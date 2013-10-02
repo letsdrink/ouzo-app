@@ -12,7 +12,7 @@
 
         <div class="form-group">
             <div class="col-lg-offset-2 col-lg-10">
-                <?= linkButton(array('name' => 'edit', 'value' => 'Edit', 'url' => editUserPath($this->user), 'class' => "btn btn-primary")) ?>
+                <?= linkButton(array('name' => 'edit', 'value' => 'Edit', 'url' => editUserPath($this->user->id), 'class' => "btn btn-primary")) ?>
                 <?= linkButton(array('name' => 'cancel', 'value' => 'Cancel', 'url' => usersPath(), 'class' => "btn btn-default")) ?>
             </div>
         </div>
