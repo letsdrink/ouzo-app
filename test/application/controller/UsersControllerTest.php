@@ -91,7 +91,7 @@ class UsersControllerTest extends ControllerTestCase
         )));
 
         //then
-        $this->assertRedirectsTo(showUserPath($user));
+        $this->assertRedirectsTo(userPath($user->id));
     }
 
     /**
