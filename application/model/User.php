@@ -8,9 +8,6 @@ class User extends Model
     function __construct($attributes = array())
     {
         parent::__construct(array(
-            'table' => 'users',
-            'sequence' => 'users_id_seq',
-            'primaryKey' => 'id',
             'attributes' => $attributes,
             'fields' => array('login', 'password')));
     }
