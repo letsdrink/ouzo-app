@@ -1,15 +1,24 @@
 <html>
 <head>
     <title>Ouzo Framework :: Bootstrap</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+
     <?= addFile(array('type' => 'link', 'params' => array('url' => '/public/css/style.css'))); ?>
 </head>
 <body>
     <header>
         <h1><img src="<?= url(array('string' => '/public/images/thulium.png')) ?> "> Ouzo Framework!</h1>
     </header>
-    <section>
+
+    <div class="content">
         <?= $this->layoutContent(); ?>
-    </section>
+    </div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
-

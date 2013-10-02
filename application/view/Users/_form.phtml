@@ -1,26 +1,36 @@
 <?= showErrors($this->user->getErrors()); ?>
 
-<fieldset class="new-user">
-    <legend>New user</legend>
-    <? $form = formFor($this->user, 'customer', array('auto_labels' => false)); ?>
-    <?= $form->start($this->url, 'post', array('class' => 'form')) ?>
+<div class="panel panel-default">
+    <div class="panel-heading">New user</div>
+    <div class="panel-body">
+        <? $form = formFor($this->user, 'customer', array('auto_labels' => false)); ?>
+        <?= $form->start($this->url, 'post', array('class' => 'form-horizontal')) ?>
 
-    <div>
-        <?= $form->label('login') ?>
-        <?= $form->textField('login') ?>
+        <div class="form-group">
+            <?= $form->label('login', array('class' => 'control-label col-lg-2')) ?>
+
+            <div class="col-lg-10">
+                <?= $form->textField('login') ?>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <?= $form->label('password', array('class' => 'control-label col-lg-2')) ?>
+
+            <div class="col-lg-10">
+                <?= $form->passwordField('password') ?>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10">
+                <button type="submit" class="btn btn-primary">Save</button>
+                <?= linkButton(array('name' => 'cancel', 'value' => 'Cancel', 'url' => usersPath(), 'class' => "btn btn-default")) ?>
+            </div>
+        </div>
+
+        <?= $form->end() ?>
     </div>
-
-    <div>
-        <?= $form->label('password') ?>
-        <?= $form->passwordField('password') ?>
-    </div>
-
-    <input type="submit" name="save" id="save" value="Save"/>
-
-    <?= $form->end() ?>
-
-</fieldset>
-
-
+</div>
 
 

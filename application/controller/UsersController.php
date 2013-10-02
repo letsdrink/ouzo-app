@@ -28,7 +28,7 @@ class UsersController extends Controller
         $user = new User($this->params['user']);
         if ($user->isValid()) {
             $user->insert();
-            $this->redirect(usersPath());
+            $this->redirect(usersPath(), "User added");
         } else {
             $this->view->user = $user;
             $this->view->render('Users/fresh');

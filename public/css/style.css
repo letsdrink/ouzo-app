@@ -1,12 +1,10 @@
 body {
-    background: url("../images/bg.png");
-
     font-family: Verdana, serif;
 }
 
 header {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     border-bottom: 1px inset #5B313F;
     text-align: center;
 }
@@ -17,17 +15,11 @@ h1 {
 }
 
 div.content {
-    color: #5B4D51;
-    margin: 30px;
-    padding: 30px;
-    border: 1px solid;
+    margin: auto;
 }
 
-.form label {
-    display: block;
-    width: 100px;
-    float: left;
-    margin-top: 2px;
+.content {
+    width: 900px;
 }
 
 fieldset.new-user {

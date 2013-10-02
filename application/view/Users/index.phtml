@@ -1,4 +1,26 @@
-<span>Users:</span>
-<?foreach($this->users as $user):?>
-    <div><?= $user->login ?></div>
-<?endforeach?>
+
+<?= showNotices() ?>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Users</div>
+    <div class="panel-body">
+        <?= linkButton(array('name' => 'add_new', 'value' => 'Add', 'url' => addUserPath(), 'class' => "btn btn-primary")) ?>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Login</th>
+            </tr>
+            </thead>
+            <tbody>
+            <? foreach ($this->users as $index => $user): ?>
+                <tr>
+                    <td><?= $index ?></td>
+                    <td><?= $user->login ?></td>
+                </tr>
+            <? endforeach ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+
