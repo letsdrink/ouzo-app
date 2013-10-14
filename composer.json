@@ -16,7 +16,12 @@
     "require-dev": {
         "composer/composer": "dev-master"
     },
+    "autoload": {
+        "psr-0": {
+            "Installer": "bin/"
+        }
+    },
     "scripts": {
-        "post-create-project-cmd": "PostCreateProject::changePrefix"
+        "post-create-project-cmd": "Installer\\PostCreateProject::changePrefix"
     }
 }

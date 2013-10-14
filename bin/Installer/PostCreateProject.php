@@ -1,4 +1,6 @@
 <?php
+namespace Installer;
+
 use Composer\Script\Event;
 
 class PostCreateProject
