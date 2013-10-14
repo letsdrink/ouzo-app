@@ -12,5 +12,11 @@
     "require": {
         "letsdrink/ouzo": "dev-master",
         "ruckusing/ruckusing-migrations": "dev-master"
+    },
+    "require-dev": {
+        "composer/composer": "dev-master"
+    },
+    "scripts": {
+        "post-create-project-cmd": []
     }
 }
