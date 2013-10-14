@@ -1,8 +1,6 @@
 <?php
 namespace Bin;
 
-require_once '../vendor/autoload.php';
-
 use Composer\Script\Event;
 
 class PostCreateProject
