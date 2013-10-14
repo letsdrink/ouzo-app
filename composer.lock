@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "74411387895d5a59604f4a4a1ca3a5ad",
+    "hash": "884127cd09a94cbc981584f3bb0e788c",
     "packages": [
         {
             "name": "letsdrink/ouzo",
@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/letsdrink/ouzo.git",
-                "reference": "d378c2da4d9a75a8512acd9aee5f93064fac43b1"
+                "reference": "1d66557e4eb367d0af13210b4f7e21a70eb7a64c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/d378c2da4d9a75a8512acd9aee5f93064fac43b1",
-                "reference": "d378c2da4d9a75a8512acd9aee5f93064fac43b1",
+                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/1d66557e4eb367d0af13210b4f7e21a70eb7a64c",
+                "reference": "1d66557e4eb367d0af13210b4f7e21a70eb7a64c",
                 "shasum": ""
             },
             "require-dev": {
@@ -47,7 +47,7 @@
                 "orm",
                 "php"
             ],
-            "time": "2013-10-14 09:24:30"
+            "time": "2013-10-14 12:15:00"
         },
         {
             "name": "ruckusing/ruckusing-migrations",

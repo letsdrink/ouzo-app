@@ -16,12 +16,7 @@
     "require-dev": {
         "composer/composer": "dev-master"
     },
-    "autoload": {
-        "psr-0": {
-            "Bin\\": "./"
-        }
-    },
     "scripts": {
-        "post-create-project-cmd": "Bin\\PostCreateProject::changePrefix"
+        "post-create-project-cmd": "PostCreateProject::changePrefix"
     }
 }

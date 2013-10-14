@@ -1,6 +1,4 @@
 <?php
-namespace Bin;
-
 use Composer\Script\Event;
 
 class PostCreateProject
