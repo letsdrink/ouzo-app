@@ -17,6 +17,6 @@
         "composer/composer": "dev-master"
     },
     "scripts": {
-        "post-create-project-cmd": []
+        "post-create-project-cmd": "Bin\\PostCreateProject::changePrefix"
     }
 }
