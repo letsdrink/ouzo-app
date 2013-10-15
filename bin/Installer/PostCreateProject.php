@@ -7,7 +7,8 @@ class PostCreateProject
 {
     public static function changePrefix(Event $event)
     {
-        $prefixSystem = $event->getComposer()->getPackage();
+        $package = $event->getComposer()->getPackage();
+        $prefixSystem = $event->getComposer()->getInstallationManager()->getInstallPath($package);
         $a = print_r($prefixSystem, true);
         $b = print_r(__DIR__, true);
         file_put_contents('/tmp/test1', $a);
