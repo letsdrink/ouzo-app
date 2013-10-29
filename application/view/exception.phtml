@@ -27,11 +27,11 @@
         width: 95%
     }
 </style>
-<? if (\Ouzo\Config::getValue('debug')): ?>
+<?php if (\Ouzo\Config::getValue('debug')): ?>
     <div id="errorTrace">
         <p id="message">Message: <strong><?php echo $errorMessage; ?></strong></p>
         <hr/>
-        <div id="trace"> Error ID: <?= \Ouzo\FrontController::$requestId ?> </div>
+        <div id="trace"> Error ID: <?php echo \Ouzo\FrontController::$requestId; ?> </div>
         <hr/>
         <div id="trace">
             Trace:
@@ -40,11 +40,11 @@
         </pre>
         </div>
     </div>
-<? else: ?>
+<?php else: ?>
     <div id="errorTrace">
         <p id="message"><strong>Wystąpił błąd. Skopiuj poniższy identyfikator błędu (ID) i skontaktuj się z nami.</strong>
         </p>
         <hr/>
-        <div id="trace">ID: <?= \Ouzo\FrontController::$requestId ?></div>
+        <div id="trace">ID: <?php echo \Ouzo\FrontController::$requestId; ?></div>
     </div>
-<? endif; ?>
+<?php endif; ?>

@@ -1,4 +1,4 @@
-<?
+<?php
 if (\Ouzo\Config::getValue('debug')) {
     ?>
     <div style="clear: both; padding: 50px; border: 1px; background-color: #ffffee; color: #000000">
@@ -9,7 +9,7 @@ if (\Ouzo\Config::getValue('debug')) {
         <div id="stats"></div>
     </div>
     <script>
-        var url = "<?= url(array('controller' => 'stats', 'action' => 'show')) ?>";
+        var url = "<?php echo url(array('controller' => 'stats', 'action' => 'show')); ?>";
 
         function reloadStats() {
             $.get(url, function (data) {
@@ -18,6 +18,6 @@ if (\Ouzo\Config::getValue('debug')) {
         }
         reloadStats();
     </script>
-<?
+<?php
 }
 ?>

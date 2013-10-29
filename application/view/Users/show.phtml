@@ -1,19 +1,19 @@
-<?= showNotices() ?>
+<?php echo showNotices(); ?>
 
 <div class="panel panel-default">
     <div class="panel-heading">User</div>
     <div class="panel-body">
         <div>
-            <?= labelTag('login', 'login', array('class' => 'control-label col-lg-2')) ?>
+            <?php echo labelTag('login', 'login', array('class' => 'control-label col-lg-2')); ?>
             <div class="col-lg-10">
-                <?= $this->user->login ?>
+                <?php echo $this->user->login; ?>
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-lg-offset-2 col-lg-10">
-                <?= linkButton(array('name' => 'edit', 'value' => 'Edit', 'url' => editUserPath($this->user->id), 'class' => "btn btn-primary")) ?>
-                <?= linkButton(array('name' => 'cancel', 'value' => 'Cancel', 'url' => usersPath(), 'class' => "btn btn-default")) ?>
+                <?php echo linkButton(array('name' => 'edit', 'value' => 'Edit', 'url' => editUserPath($this->user->id), 'class' => "btn btn-primary")); ?>
+                <?php echo linkButton(array('name' => 'cancel', 'value' => 'Cancel', 'url' => usersPath(), 'class' => "btn btn-default")); ?>
             </div>
         </div>
     </div>
