@@ -10,9 +10,9 @@ define('ROOT_PATH', realpath(dirname(__FILE__)) . DIRECTORY_SEPARATOR);
 
 require 'vendor/autoload.php';
 
-require_once ROOT_PATH . 'vendor/letsdrink/ouzo/lib/Ouzo/Loader.php';
-require_once ROOT_PATH . 'vendor/letsdrink/ouzo/lib/Ouzo/FrontController.php';
-require_once ROOT_PATH . 'vendor/letsdrink/ouzo/lib/Ouzo/Error.php';
+require_once ROOT_PATH . 'vendor/letsdrink/ouzo/src/Ouzo/Loader.php';
+require_once ROOT_PATH . 'vendor/letsdrink/ouzo/src/Ouzo/FrontController.php';
+require_once ROOT_PATH . 'vendor/letsdrink/ouzo/src/Ouzo/Error.php';
 $routesFilename = ROOT_PATH . 'config/routes.php';
 
 if (file_exists($routesFilename)) {
