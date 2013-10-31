@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/letsdrink/ouzo.git",
-                "reference": "579a567518fc3cf6aebb9415826571483d137398"
+                "reference": "6462b3d4c22a95ec957198fec0101cd063c310d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/579a567518fc3cf6aebb9415826571483d137398",
-                "reference": "579a567518fc3cf6aebb9415826571483d137398",
+                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/6462b3d4c22a95ec957198fec0101cd063c310d0",
+                "reference": "6462b3d4c22a95ec957198fec0101cd063c310d0",
                 "shasum": ""
             },
             "require-dev": {
@@ -47,7 +47,7 @@
                 "orm",
                 "php"
             ],
-            "time": "2013-10-29 09:58:23"
+            "time": "2013-10-31 13:28:19"
         },
         {
             "name": "ruckusing/ruckusing-migrations",
@@ -112,12 +112,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "c849f7d05d4eb5e585c34c83bd41341bc144f0d0"
+                "reference": "d11bb8677822301f8818476808ca53a561bf5eaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/c849f7d05d4eb5e585c34c83bd41341bc144f0d0",
-                "reference": "c849f7d05d4eb5e585c34c83bd41341bc144f0d0",
+                "url": "https://api.github.com/repos/composer/composer/zipball/d11bb8677822301f8818476808ca53a561bf5eaf",
+                "reference": "d11bb8677822301f8818476808ca53a561bf5eaf",
                 "shasum": ""
             },
             "require": {
@@ -173,7 +173,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2013-10-29 09:32:58"
+            "time": "2013-10-31 10:50:04"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -284,12 +284,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "662a2922e0bcb3669e66ab36c20ce508c68b1d46"
+                "reference": "eca72b22138f66f4244a3eddc18c7261cfcd130c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/662a2922e0bcb3669e66ab36c20ce508c68b1d46",
-                "reference": "662a2922e0bcb3669e66ab36c20ce508c68b1d46",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/eca72b22138f66f4244a3eddc18c7261cfcd130c",
+                "reference": "eca72b22138f66f4244a3eddc18c7261cfcd130c",
                 "shasum": ""
             },
             "require": {
@@ -328,7 +328,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2013-10-23 08:18:42"
+            "time": "2013-10-30 08:33:58"
         },
         {
             "name": "symfony/finder",
@@ -384,12 +384,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "27b0fc645a557b2fc7bc7735cfb05505de9351be"
+                "reference": "225f6e85fbe7962f83c0ac7fe060bccac73d5709"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/27b0fc645a557b2fc7bc7735cfb05505de9351be",
-                "reference": "27b0fc645a557b2fc7bc7735cfb05505de9351be",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/225f6e85fbe7962f83c0ac7fe060bccac73d5709",
+                "reference": "225f6e85fbe7962f83c0ac7fe060bccac73d5709",
                 "shasum": ""
             },
             "require": {
@@ -422,7 +422,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2013-10-10 05:53:18"
+            "time": "2013-10-30 08:33:58"
         }
     ],
     "aliases": [

@@ -1,47 +1,33 @@
 <meta charset="utf-8"/>
 <style>
-    body {
-        margin: 0;
-        padding: 10px;
+    .content {
+        margin: 7em auto 0 auto;
+        height:50%;
+        text-align: center;
+        background-color: #f4f4f4;
     }
-
-    #errorTrace {
-        margin: 0;
-        font-size: 16px;
-        border: 2px solid;
-        background-color: #FF9999;
-        padding: 10px;
+    .title {
+        top: 20%;
+        font-size: 100px;
+        margin-bottom: 30px;
     }
-
-    #message {
-        margin: 0;
-    }
-
-    #trace {
-        margin-top: 10px;
-    }
-
-    pre {
-        font-size: 12px;
-        overflow: auto;
-        width: 95%
+    .trace {
+        text-align: left;
+        display: inline-block
     }
 </style>
-<?php if (\Ouzo\Config::getValue('debug')): ?>
-    <div id="errorTrace">
-        <p id="message">Message: <strong><?php echo $errorMessage; ?></strong></p>
-        <hr/>
-        <div id="trace"> Error ID: <?php echo \Ouzo\FrontController::$requestId; ?> </div>
-        <hr/>
-        <div id="trace">
-            Trace:
-        <pre>
-        <?php echo trim($errorTrace); ?>
-        </pre>
+
+<div class="content">
+    <div class="title">Oops, 404!</div>
+    <div><strong>The page you were looking for could not be found. Error ID: <?php echo \Ouzo\FrontController::$requestId; ?></strong></div>
+
+    <?php if (\Ouzo\Config::getValue('debug')): ?>
+        <div>
+            <p>Message: <strong><?php echo $errorMessage; ?></strong></p>
+            <div class="trace">
+                Trace:
+                <pre><?php echo trim($errorTrace); ?></pre>
+            </div>
         </div>
-    </div>
-<?php else: ?>
-    <div id="errorTrace">
-        <p id="message"><strong>Page not found.</strong></p>
-    </div>
-<?php endif; ?>
+    <?php endif; ?>
+</div>
