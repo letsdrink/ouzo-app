@@ -1,6 +1,6 @@
 <?php
 $config['db']['dbname'] = 'app_test';
-$config['db']['user'] = 'thulium_1';
+$config['db']['user'] = 'postgres';
 $config['db']['pass'] = '';
 $config['db']['driver'] = 'pgsql';
 $config['db']['host'] = '127.0.0.1';

@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/letsdrink/ouzo.git",
-                "reference": "6462b3d4c22a95ec957198fec0101cd063c310d0"
+                "reference": "87e029ed0a85c0b27e5a6d5d4009e6923ee035fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/6462b3d4c22a95ec957198fec0101cd063c310d0",
-                "reference": "6462b3d4c22a95ec957198fec0101cd063c310d0",
+                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/87e029ed0a85c0b27e5a6d5d4009e6923ee035fa",
+                "reference": "87e029ed0a85c0b27e5a6d5d4009e6923ee035fa",
                 "shasum": ""
             },
             "require-dev": {
@@ -47,7 +47,7 @@
                 "orm",
                 "php"
             ],
-            "time": "2013-10-31 13:28:19"
+            "time": "2013-11-02 14:53:13"
         },
         {
             "name": "ruckusing/ruckusing-migrations",
@@ -112,12 +112,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "d11bb8677822301f8818476808ca53a561bf5eaf"
+                "reference": "d3ff302194a905be90136fd5a29436a42714e377"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/d11bb8677822301f8818476808ca53a561bf5eaf",
-                "reference": "d11bb8677822301f8818476808ca53a561bf5eaf",
+                "url": "https://api.github.com/repos/composer/composer/zipball/d3ff302194a905be90136fd5a29436a42714e377",
+                "reference": "d3ff302194a905be90136fd5a29436a42714e377",
                 "shasum": ""
             },
             "require": {
@@ -173,7 +173,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2013-10-31 10:50:04"
+            "time": "2013-10-31 22:19:08"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -284,12 +284,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "eca72b22138f66f4244a3eddc18c7261cfcd130c"
+                "reference": "92cdb410d68c7b6ccb6eb38ad0ffe4e2d1cd9a2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/eca72b22138f66f4244a3eddc18c7261cfcd130c",
-                "reference": "eca72b22138f66f4244a3eddc18c7261cfcd130c",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/92cdb410d68c7b6ccb6eb38ad0ffe4e2d1cd9a2c",
+                "reference": "92cdb410d68c7b6ccb6eb38ad0ffe4e2d1cd9a2c",
                 "shasum": ""
             },
             "require": {
@@ -328,7 +328,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2013-10-30 08:33:58"
+            "time": "2013-10-31 16:40:24"
         },
         {
             "name": "symfony/finder",
