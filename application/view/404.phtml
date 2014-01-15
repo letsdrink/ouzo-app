@@ -1,22 +1,39 @@
 <meta charset="utf-8"/>
 <style>
+    body.error {
+        background: none repeat scroll 0 0 #f4f4f4;
+        border: 0 none;
+        font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        color: #555;
+    }
+
     .content {
         margin: 7em auto 0 auto;
-        height:50%;
         text-align: center;
-        background-color: #f4f4f4;
+        background-color: #E7E7E7;
+        padding-bottom: 20px;
     }
+
     .title {
         top: 20%;
         font-size: 100px;
         margin-bottom: 30px;
+
+        color: #d9534f;
+        font-weight: 300;
+        letter-spacing: -10px;
     }
     .trace {
         text-align: left;
-        display: inline-block
+        display: inline-block;
     }
-</style>
 
+</style>
+<body class="error">
 <div class="content">
     <div class="title">Oops, 404!</div>
     <div><strong>The page you were looking for could not be found. Error ID: <?php echo \Ouzo\FrontController::$requestId; ?></strong></div>
@@ -31,3 +48,4 @@
         </div>
     <?php endif; ?>
 </div>
+</body>
