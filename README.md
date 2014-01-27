@@ -31,7 +31,7 @@ Ouzo Configuration
 
 Ouzo configuration is located under `config/prod/Config.php`.
 
-What's important for now is that is debug turned on by default. Please, leave it like this for installation purposes, as you will be able to see detailed error messages in case something goes wrong.
+What's important for now is that debug is turned on by default. Please, leave it like this for installation purposes, as you will be able to see detailed error messages in case something goes wrong.
 
 Database Configuration
 ----------------------
@@ -63,7 +63,7 @@ GRANT ALL PRIVILEGES ON DATABASE app TO ouzo;
 Migrations
 ----------
 
-Your database is empty at the beginning. To demonstrate Ouzo capabilities we have created sample database. Use db.sh script to apply migrations:
+Your database is empty at the beginning. To demonstrate Ouzo capabilities we have created a sample database. Use db.sh script to apply migrations:
 ```
 ./db.sh db:migrate
 ```
@@ -83,7 +83,7 @@ Open your favourite browser and go to http://localhost/myproject. Your first Ouz
 Running tests
 -------------
 
-Test configuration can be found in `config/test/Config.php`. You will need separate database for tests purposes only. Set it up the same way as production one, as described in Database Configration section.
+Test configuration can be found in `config/test/Config.php`. You will need separate database for tests purposes only. Set it up in the same way as production one, as described in Database Configration section.
 
 Apply migrations:
 ```
