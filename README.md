@@ -1,7 +1,7 @@
-Ouzo - Application
-==================
+Ouzo - 5 minutes tutorial
+=========================
 
-How to use Ouzo step by step.
+How to use Ouzo step by step. It takes only 5 minutes to set up sample project and start experiencing Ouzo.
 
 Set up project
 --------------
@@ -38,7 +38,7 @@ Database Configuration
 
 Sample project is using PostgreSQL by default. Database config can be found in Ouzo configuration file:
 
-```
+```php
 $config['db']['dbname'] = 'app';
 $config['db']['user'] = 'ouzo';
 $config['db']['pass'] = 'password';
@@ -74,3 +74,34 @@ To see full list of possible migrations related actions run:
 ```
 
 Ouzo uses Ruckusing framework for migrations (https://github.com/ruckus/ruckusing-migrations).
+
+Check out the app!
+------------------
+
+Open your favourite browser and go to http://localhost/myproject. Your first Ouzo project is now running! You can play around by adding, browsing and editing users.
+
+Running tests
+-------------
+
+Test configuration can be found in `config/test/Config.php`. You will need separate database for tests purposes only. Set it up the same way as production one, as described in Database Configration section.
+
+Apply migrations:
+```
+environment=test ./db.sh db:migrate
+```
+
+Now run tests:
+```
+phpunit --bootstrap bootstrap_test.php test/
+```
+
+If all tests are passing, you're good to go!
+
+More
+----
+
+Check out Ouzo tutorial:
+https://github.com/letsdrink/ouzo/wiki/Tutorial
+
+Ouzo documentation:
+https://github.com/letsdrink/ouzo/wiki
