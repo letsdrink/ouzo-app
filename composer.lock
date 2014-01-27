@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/letsdrink/ouzo.git",
-                "reference": "96a117f2796bc5139a8dbb7c7f7ea9697e7a452f"
+                "reference": "5bcabaf87f6225b19b6b79af92b0ff2c7ca9eac0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/96a117f2796bc5139a8dbb7c7f7ea9697e7a452f",
-                "reference": "96a117f2796bc5139a8dbb7c7f7ea9697e7a452f",
+                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/5bcabaf87f6225b19b6b79af92b0ff2c7ca9eac0",
+                "reference": "5bcabaf87f6225b19b6b79af92b0ff2c7ca9eac0",
                 "shasum": ""
             },
             "require-dev": {
@@ -47,7 +47,7 @@
                 "orm",
                 "php"
             ],
-            "time": "2014-01-14 13:03:09"
+            "time": "2014-01-27 18:56:20"
         },
         {
             "name": "ruckusing/ruckusing-migrations",
@@ -112,12 +112,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "d3ff302194a905be90136fd5a29436a42714e377"
+                "reference": "4ec4ba1397e7cc07c0986d866b62397091e7d20d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/d3ff302194a905be90136fd5a29436a42714e377",
-                "reference": "d3ff302194a905be90136fd5a29436a42714e377",
+                "url": "https://api.github.com/repos/composer/composer/zipball/4ec4ba1397e7cc07c0986d866b62397091e7d20d",
+                "reference": "4ec4ba1397e7cc07c0986d866b62397091e7d20d",
                 "shasum": ""
             },
             "require": {
@@ -126,7 +126,7 @@
                 "seld/jsonlint": "1.*",
                 "symfony/console": "~2.3",
                 "symfony/finder": "~2.2",
-                "symfony/process": "~2.1@dev"
+                "symfony/process": "~2.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "~3.7.10"
@@ -173,7 +173,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2013-10-31 22:19:08"
+            "time": "2014-01-27 13:36:06"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -232,16 +232,16 @@
         },
         {
             "name": "seld/jsonlint",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/jsonlint.git",
-                "reference": "2b5b57008ec93148fa46110d42c7a201a6677fe0"
+                "reference": "7cd4c4965e17e6e4c07f26d566619a4c76f8c672"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/2b5b57008ec93148fa46110d42c7a201a6677fe0",
-                "reference": "2b5b57008ec93148fa46110d42c7a201a6677fe0",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/7cd4c4965e17e6e4c07f26d566619a4c76f8c672",
+                "reference": "7cd4c4965e17e6e4c07f26d566619a4c76f8c672",
                 "shasum": ""
             },
             "require": {
@@ -275,7 +275,7 @@
                 "parser",
                 "validator"
             ],
-            "time": "2013-02-11 23:03:12"
+            "time": "2013-11-04 15:41:11"
         },
         {
             "name": "symfony/console",
@@ -284,12 +284,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "92cdb410d68c7b6ccb6eb38ad0ffe4e2d1cd9a2c"
+                "reference": "47e82eadf64a81e0a778c7249c7292987f1bfcff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/92cdb410d68c7b6ccb6eb38ad0ffe4e2d1cd9a2c",
-                "reference": "92cdb410d68c7b6ccb6eb38ad0ffe4e2d1cd9a2c",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/47e82eadf64a81e0a778c7249c7292987f1bfcff",
+                "reference": "47e82eadf64a81e0a778c7249c7292987f1bfcff",
                 "shasum": ""
             },
             "require": {
@@ -304,7 +304,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -328,7 +328,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2013-10-31 16:40:24"
+            "time": "2014-01-24 14:36:35"
         },
         {
             "name": "symfony/finder",
@@ -337,12 +337,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "e2ce3164ab58b4d54612e630571f158035ee8603"
+                "reference": "9a267caac6298b91efc7f0bc8522fd80f48fee98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/e2ce3164ab58b4d54612e630571f158035ee8603",
-                "reference": "e2ce3164ab58b4d54612e630571f158035ee8603",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/9a267caac6298b91efc7f0bc8522fd80f48fee98",
+                "reference": "9a267caac6298b91efc7f0bc8522fd80f48fee98",
                 "shasum": ""
             },
             "require": {
@@ -351,7 +351,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -375,7 +375,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2013-09-19 09:47:34"
+            "time": "2014-01-07 13:29:57"
         },
         {
             "name": "symfony/process",
@@ -384,12 +384,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "225f6e85fbe7962f83c0ac7fe060bccac73d5709"
+                "reference": "d4b086ca4d6e192d8c2c64fe011159c8bc4c9daa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/225f6e85fbe7962f83c0ac7fe060bccac73d5709",
-                "reference": "225f6e85fbe7962f83c0ac7fe060bccac73d5709",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/d4b086ca4d6e192d8c2c64fe011159c8bc4c9daa",
+                "reference": "d4b086ca4d6e192d8c2c64fe011159c8bc4c9daa",
                 "shasum": ""
             },
             "require": {
@@ -398,7 +398,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -422,7 +422,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2013-10-30 08:33:58"
+            "time": "2014-01-07 13:29:57"
         }
     ],
     "aliases": [
