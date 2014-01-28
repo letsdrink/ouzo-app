@@ -1,6 +1,6 @@
 <div class="alert alert-danger">
     <div>There was an error.</div>
-    <div>ID: <?= \Ouzo\FrontController::$requestId ?></div>
+    <div>ID: <?php echo \Ouzo\FrontController::$requestId ?></div>
 
     <?php if (\Ouzo\Config::getValue('debug')): ?>
         <div>Message: <?php echo $errorMessage; ?></div>
