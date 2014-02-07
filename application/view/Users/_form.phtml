@@ -3,7 +3,7 @@
 <div class="panel panel-default">
     <div class="panel-heading"><?php echo $this->title; ?></div>
     <div class="panel-body">
-        <?php $form = formFor($this->user, 'customer', array('auto_labels' => false)); ?>
+        <?php $form = formFor($this->user); ?>
         <?php echo $form->start($this->url, $this->method, array('class' => 'form-horizontal')); ?>
 
         <div class="form-group">
