@@ -51,7 +51,6 @@ class UsersController extends Controller
     {
         $user = User::findById($this->params['id']);
         if ($user->updateAttributes($this->params['user'])) {
-            $user->update();
             $this->redirect(userPath($user->id), "User updated");
         } else {
             $this->view->user = $user;
