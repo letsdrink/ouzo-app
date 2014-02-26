@@ -81,9 +81,14 @@ class PostCreateProject
     public static function changeDbName(Event $event)
     {
         $path = self::_getPath($event);
-        $db_name = basename($path);
+        $db_name = self::_prepareNewDbName(basename($path));
         self::_changeDbName('prod', $path, $db_name);
         self::_changeDbName('test', $path, $db_name . '_test');
+    }
+
+    private static function _prepareNewDbName($db_name)
+    {
+        return preg_replace('/\W/', '_', $db_name);
     }
 
     private static function _changeDbName($conf, $path, $db_name)
