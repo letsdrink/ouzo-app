@@ -1,7 +1,7 @@
 <?php
 $config['db']['dbname'] = 'app';
-$config['db']['user'] = 'postgres';
-$config['db']['pass'] = '';
+$config['db']['user'] = 'ouzo';
+$config['db']['pass'] = 'password';
 $config['db']['driver'] = 'pgsql';
 $config['db']['host'] = '127.0.0.1';
 $config['db']['port'] = '5432';

@@ -8,13 +8,13 @@ class PostCreateProject
 {
     public static function setConfig(Event $event)
     {
-        $event->getIO()->write("\n<info>Which db you choose?<info>");
-        $event->getIO()->write("1) mysql \n2) sqlite3 \n3) postgres");
+        $event->getIO()->write("\n<info>[Ouzo] Choose a database that you want to use in your project (it can be changed later):<info>");
+        $event->getIO()->write("1) MySQL / MariaDB \n2) SQLite \n3) PostgreSQL");
         $code = $event->getIO()->ask("Choose [1], 2 or 3: ", '1');
         $translated = self::_translateDbCode($code);
 
         if (in_array($code, array(1, 2, 3))) {
-            $event->getIO()->write('You choose <info>' . $code . ' - ' . $translated . '</info>.');
+            $event->getIO()->write('Your choice is: <info>' . $code . ' - ' . $translated . '</info>.');
             self::_prepareToCopyConfig($code, self::_getPath($event));
         } else {
             $event->getIO()->write('<error>' . $translated . '</error>');
