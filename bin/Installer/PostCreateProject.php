@@ -70,7 +70,7 @@ class PostCreateProject
             $source = Path::join(__DIR__, 'stubs', 'sqlite3_db');
             $destination = Path::join($path, 'db', $newDbName);
             copy($source, $destination);
-            chmod($dbNameWithPath, 777);
+            chmod($dbNameWithPath, 0777);
         }
     }
 
