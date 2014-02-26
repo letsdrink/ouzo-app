@@ -13,20 +13,19 @@ class PostCreateProject
         $event->getIO()->write("<info> 888   888  888   888     .d8P'   888   888<info>");
         $event->getIO()->write("<info> 888   888  888   888   .d8P'  .P 888   888<info>");
         $event->getIO()->write("<info> `Y8bod8P'  `V88V\"V8P' d8888888P  `Y8bod8P'<info>");
+        $event->getIO()->write("\n<info>            F R A M E W O R K<info>");
         $event->getIO()->write("\n[Ouzo] Choose a database that you want to use in your project (it can be changed later):");
-        $event->getIO()->write("1) MySQL / MariaDB \n2) SQLite \n3) PostgreSQL");
+        $event->getIO()->write(" 1) MySQL / MariaDB \n 2) SQLite \n 3) PostgreSQL");
         $code = $event->getIO()->ask("Choose [1], 2 or 3: ", '1');
         $translated = self::_translateDbCode($code);
 
         if (in_array($code, array(1, 2, 3))) {
-            $event->getIO()->write('Your choice is: <info>' . $code . ' - ' . $translated . '</info>.');
-            $path = self::_getPath($event);
-            self::_prepareToCopyConfig($code, $path);
-            self::_changeDnsIfSqlite3($code, $path, 'prod');
-            self::_changeDnsIfSqlite3($code, $path, 'test');
+            $event->getIO()->write('Setting up <info>' . $code . ' - ' . $translated . '</info> - Done!');
+            self::_prepareToCopyConfig($code, self::_getPath($event));
         } else {
             $event->getIO()->write('<error>' . $translated . '</error>');
         }
+        $event->getIO()->write('nFor more info about Ouzo check out http://ouzoframework.org');
     }
 
     private static function _translateDbCode($code)
@@ -58,18 +57,6 @@ class PostCreateProject
         }
     }
 
-    private static function _changeDnsIfSqlite3($code, $path, $conf)
-    {
-        if ($code == 2) {
-            $db_name = self::_prepareNewDbName(basename($path));
-            $newDbName = $conf == 'test' ? $db_name . '_test' : $db_name;
-            self::_replaceValue($path, $conf, 'sqlite:ouzo_test', 'sqlite:' . $newDbName);
-            $source = Path::join(__DIR__, 'stubs', 'sqlite3_db');
-            $destination = Path::join($path, 'db', $newDbName);
-            copy($source, $destination);
-        }
-    }
-
     private static function _copyConfig($path, $type)
     {
         $sourceProd = Path::join(__DIR__, 'stubs', $type . '.prod.config.php.stub');
@@ -92,7 +79,10 @@ class PostCreateProject
 
     private static function _changePrefix($conf, $path, $prefix)
     {
-        self::_replaceValue($path, $conf, 'ouzo-test', $prefix);
+        $configPath = Path::join($path, 'config', $conf, 'config.php');
+        $config = file_get_contents($configPath);
+        $configReplaced = str_replace('ouzo-test', $prefix, $config);
+        file_put_contents($configPath, $configReplaced);
     }
 
     public static function changeDbName(Event $event)
@@ -110,7 +100,10 @@ class PostCreateProject
 
     private static function _changeDbName($conf, $path, $db_name)
     {
-        self::_replaceValue($path, $conf, 'app', $db_name);
+        $configPath = Path::join($path, 'config', $conf, 'config.php');
+        $config = file_get_contents($configPath);
+        $configReplaced = str_replace('app', $db_name, $config);
+        file_put_contents($configPath, $configReplaced);
     }
 
     private static function _getPath(Event $event)
@@ -119,13 +112,5 @@ class PostCreateProject
         $path = $event->getComposer()->getInstallationManager()->getInstallPath($package);
         $path = str_replace('/vendor/letsdrink/ouzo-app', '', $path);
         return $path;
-    }
-
-    private static function _replaceValue($path, $conf, $search, $replacement)
-    {
-        $configPath = Path::join($path, 'config', $conf, 'config.php');
-        $config = file_get_contents($configPath);
-        $configReplaced = str_replace($search, $replacement, $config);
-        file_put_contents($configPath, $configReplaced);
     }
 }
