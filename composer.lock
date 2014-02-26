@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ecc1c38fba2933434a0d1950fd1366d4",
+    "hash": "d2e1ed28560cd6de47d9954e1a45145d",
     "packages": [
         {
             "name": "letsdrink/ouzo",
@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/letsdrink/ouzo.git",
-                "reference": "c9dda22379879ffddbbb67f12d5bf7a981b5a60a"
+                "reference": "e228630d9d54d2a736f55611548700290f2c21b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/c9dda22379879ffddbbb67f12d5bf7a981b5a60a",
-                "reference": "c9dda22379879ffddbbb67f12d5bf7a981b5a60a",
+                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/e228630d9d54d2a736f55611548700290f2c21b5",
+                "reference": "e228630d9d54d2a736f55611548700290f2c21b5",
                 "shasum": ""
             },
             "require-dev": {
@@ -47,7 +47,7 @@
                 "orm",
                 "php"
             ],
-            "time": "2014-02-26 13:36:12"
+            "time": "2014-02-26 15:29:46"
         },
         {
             "name": "ruckusing/ruckusing-migrations",
@@ -112,12 +112,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "e1e48b28f75e9c6a293fc032588093c6f6d8d3fb"
+                "reference": "5b0dc99fec6d2233db57d97cac3dd15824ea21f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/e1e48b28f75e9c6a293fc032588093c6f6d8d3fb",
-                "reference": "e1e48b28f75e9c6a293fc032588093c6f6d8d3fb",
+                "url": "https://api.github.com/repos/composer/composer/zipball/5b0dc99fec6d2233db57d97cac3dd15824ea21f7",
+                "reference": "5b0dc99fec6d2233db57d97cac3dd15824ea21f7",
                 "shasum": ""
             },
             "require": {
@@ -173,7 +173,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2014-02-26 09:43:42"
+            "time": "2014-02-26 16:20:47"
         },
         {
             "name": "justinrainbow/json-schema",
