@@ -30,13 +30,13 @@ class PostCreateProject
     {
         switch ($code) {
             case 1:
-                return 'mysql';
+                return 'MySQL / MariaDB';
             case 2:
-                return 'sqlite3';
+                return 'SQLite';
             case 3:
-                return 'postgres';
+                return 'PostgreSQL';
             default:
-                return 'Wrong choose!';
+                return 'Wrong selection!';
         }
     }
 
