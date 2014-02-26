@@ -3,10 +3,11 @@ body {
 }
 
 header {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-bottom: 1px inset #5B313F;
+    border-bottom: 1px inset #384F60;
     text-align: center;
+    background-color: #F3C33B;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 h1 {

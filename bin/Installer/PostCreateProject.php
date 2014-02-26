@@ -8,13 +8,18 @@ class PostCreateProject
 {
     public static function setConfig(Event $event)
     {
-        $event->getIO()->write("\n<info>Which db you choose?<info>");
-        $event->getIO()->write("1) mysql \n2) sqlite3 \n3) postgres");
+        $event->getIO()->write("\n<info>  .ooooo.  oooo  oooo    oooooooo  .ooooo.<info>");
+        $event->getIO()->write("<info> d88' `88b `888  `888   d'\"\"7d8P  d88' `88b<info>");
+        $event->getIO()->write("<info> 888   888  888   888     .d8P'   888   888<info>");
+        $event->getIO()->write("<info> 888   888  888   888   .d8P'  .P 888   888<info>");
+        $event->getIO()->write("<info> `Y8bod8P'  `V88V\"V8P' d8888888P  `Y8bod8P'<info>");
+        $event->getIO()->write("\n[Ouzo] Choose a database that you want to use in your project (it can be changed later):");
+        $event->getIO()->write("1) MySQL / MariaDB \n2) SQLite \n3) PostgreSQL");
         $code = $event->getIO()->ask("Choose [1], 2 or 3: ", '1');
         $translated = self::_translateDbCode($code);
 
         if (in_array($code, array(1, 2, 3))) {
-            $event->getIO()->write('You choose <info>' . $code . ' - ' . $translated . '</info>.');
+            $event->getIO()->write('Your choice is: <info>' . $code . ' - ' . $translated . '</info>.');
             $path = self::_getPath($event);
             self::_prepareToCopyConfig($code, $path);
             self::_changeDnsIfSqlite3($code, $path, 'prod');
@@ -28,13 +33,13 @@ class PostCreateProject
     {
         switch ($code) {
             case 1:
-                return 'mysql';
+                return 'MySQL / MariaDB';
             case 2:
-                return 'sqlite3';
+                return 'SQLite';
             case 3:
-                return 'postgres';
+                return 'PostgreSQL';
             default:
-                return 'Wrong choose!';
+                return 'Wrong selection!';
         }
     }
 
