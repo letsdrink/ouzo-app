@@ -81,9 +81,9 @@ class PostCreateProject
     public static function changeDbName(Event $event)
     {
         $path = self::_getPath($event);
-        $package = $event->getComposer()->getPackage();
-        self::_changeDbName('prod', $path, $package);
-        self::_changeDbName('test', $path, $package . '_test');
+        $db_name = basename($path);
+        self::_changeDbName('prod', $path, $db_name);
+        self::_changeDbName('test', $path, $db_name . '_test');
     }
 
     private static function _changeDbName($conf, $path, $db_name)
