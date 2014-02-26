@@ -10,31 +10,42 @@ class PostCreateProject
     {
         $event->getIO()->write("\n<info>Which db you choose?<info>");
         $event->getIO()->write("1) mysql \n2) sqlite3 \n3) postgres");
-        $db = $event->getIO()->ask("Choose [1], 2 or 3: ", '1');
+        $code = $event->getIO()->ask("Choose [1], 2 or 3: ", '1');
+        $translated = self::_translateDbCode($code);
 
-        $event->getIO()->write('You choose <info>' . $db . '</info>.');
-        self::_prepareToCopyConfig($db, self::_getPath($event));
+        if (in_array($code, array(1, 2, 3))) {
+            $event->getIO()->write('You choose <info>' . $code . ' - ' . $translated . '</info>.');
+            self::_prepareToCopyConfig($code, self::_getPath($event));
+        } else {
+            $event->getIO()->write('<error>' . $translated . '</error>');
+        }
+    }
+
+    private static function _translateDbCode($code)
+    {
+        switch ($code) {
+            case 1:
+                return 'mysql';
+            case 2:
+                return 'sqlite3';
+            case 3:
+                return 'postgres';
+            default:
+                return 'Wrong choose!';
+        }
     }
 
     private static function _prepareToCopyConfig($db, $path)
     {
         switch ($db) {
             case 1:
-            {
                 self::_copyConfig($path, 'mysql');
-            }
                 break;
-
             case 2:
-            {
                 self::_copyConfig($path, 'sqlite3');
-            }
                 break;
-
             case 3:
-            {
                 self::_copyConfig($path, 'postgres');
-            }
                 break;
         }
     }
