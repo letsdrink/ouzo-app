@@ -72,8 +72,7 @@ class PostCreateProject
             self::_replaceValue($path, $conf, 'sqlite:ouzo_test', 'sqlite:' . $dbNameWithPath);
 
             $source = Path::join(__DIR__, 'stubs', 'sqlite3_db');
-            $destination = Path::join($path, 'db', $newDbName);
-            copy($source, $destination);
+            copy($source, $dbNameWithPath);
             chmod($dbNameWithPath, 0777);
         }
     }
