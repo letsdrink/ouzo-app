@@ -6,7 +6,7 @@ How to use Ouzo step by step. It takes only 5 minutes to set up sample project a
 Set up project
 --------------
 
-Simply use composer (http://getcomposer.org):
+Simply use composer ( http://getcomposer.org ):
 
 ```
 composer.phar create-project letsdrink/ouzo-app:dev-master myproject
