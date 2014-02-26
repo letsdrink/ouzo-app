@@ -62,9 +62,9 @@ class PostCreateProject
     {
         if ($code == 2) {
             $db_name = self::_prepareNewDbName(basename($path));
-            self::_replaceValue($path, $conf, 'sqlite:ouzo', $db_name);
+            self::_replaceValue($path, $conf, 'sqlite:ouzo', 'sqlite:'.$db_name);
             $source = Path::join(__DIR__, 'stubs', 'sqlite3_db');
-            $newDbName = $db_name == 'test' ? $db_name . '_test' : $db_name;
+            $newDbName = $conf == 'test' ? $db_name . '_test' : $db_name;
             $destination = Path::join($path, 'db', $newDbName);
             copy($source, $destination);
         }
