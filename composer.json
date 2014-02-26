@@ -24,7 +24,8 @@
     "scripts": {
         "post-create-project-cmd": [
             "Installer\\PostCreateProject::setConfig",
-            "Installer\\PostCreateProject::changePrefix"
+            "Installer\\PostCreateProject::changePrefix",
+            "Installer\\PostCreateProject::changeDbName"
         ]
     }
 }

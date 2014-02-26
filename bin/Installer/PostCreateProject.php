@@ -78,6 +78,22 @@ class PostCreateProject
         file_put_contents($configPath, $configReplaced);
     }
 
+    public static function changeDbName(Event $event)
+    {
+        $path = self::_getPath($event);
+        $package = $event->getComposer()->getPackage();
+        self::_changeDbName('prod', $path, $package);
+        self::_changeDbName('test', $path, $package . '_test');
+    }
+
+    private static function _changeDbName($conf, $path, $db_name)
+    {
+        $configPath = Path::join($path, 'config', $conf, 'config.php');
+        $config = file_get_contents($configPath);
+        $configReplaced = str_replace('ouzo-test', $db_name, $config);
+        file_put_contents($configPath, $configReplaced);
+    }
+
     private static function _getPath(Event $event)
     {
         $package = $event->getComposer()->getPackage();
