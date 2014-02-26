@@ -14,6 +14,8 @@ composer.phar create-project letsdrink/ouzo-app:dev-master myproject
 
 Where `myproject` is your project's name.
 
+After downloading Ouzo and its dependencies you will be asked what database you want to use. Ouzo will prepare config files for you. Database configuration can be changed manually later if needed.
+
 PHP Version
 -----------
 
