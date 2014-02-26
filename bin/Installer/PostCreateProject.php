@@ -15,7 +15,10 @@ class PostCreateProject
 
         if (in_array($code, array(1, 2, 3))) {
             $event->getIO()->write('You choose <info>' . $code . ' - ' . $translated . '</info>.');
-            self::_prepareToCopyConfig($code, self::_getPath($event));
+            $path = self::_getPath($event);
+            self::_prepareToCopyConfig($code, $path);
+            self::_changeDnsIfSqlite3($code, $path, 'prod');
+            self::_changeDnsIfSqlite3($code, $path, 'test');
         } else {
             $event->getIO()->write('<error>' . $translated . '</error>');
         }
@@ -50,6 +53,18 @@ class PostCreateProject
         }
     }
 
+    private static function _changeDnsIfSqlite3($code, $path, $conf)
+    {
+        if ($code == 2) {
+            $db_name = self::_prepareNewDbName(basename($path));
+            self::_replaceValue($path, $conf, 'sqlite:ouzo', $db_name);
+            $source = Path::join(__DIR__, 'stubs', 'sqlite3_db');
+            $newDbName = $db_name == 'test' ? $db_name . '_test' : $db_name;
+            $destination = Path::join($path, 'db', $newDbName);
+            copy($source, $destination);
+        }
+    }
+
     private static function _copyConfig($path, $type)
     {
         $sourceProd = Path::join(__DIR__, 'stubs', $type . '.prod.config.php.stub');
@@ -72,10 +87,7 @@ class PostCreateProject
 
     private static function _changePrefix($conf, $path, $prefix)
     {
-        $configPath = Path::join($path, 'config', $conf, 'config.php');
-        $config = file_get_contents($configPath);
-        $configReplaced = str_replace('ouzo-test', $prefix, $config);
-        file_put_contents($configPath, $configReplaced);
+        self::_replaceValue($path, $conf, 'ouzo-test', $prefix);
     }
 
     public static function changeDbName(Event $event)
@@ -93,10 +105,7 @@ class PostCreateProject
 
     private static function _changeDbName($conf, $path, $db_name)
     {
-        $configPath = Path::join($path, 'config', $conf, 'config.php');
-        $config = file_get_contents($configPath);
-        $configReplaced = str_replace('app', $db_name, $config);
-        file_put_contents($configPath, $configReplaced);
+        self::_replaceValue($path, $conf, 'app', $db_name);
     }
 
     private static function _getPath(Event $event)
@@ -105,5 +114,13 @@ class PostCreateProject
         $path = $event->getComposer()->getInstallationManager()->getInstallPath($package);
         $path = str_replace('/vendor/letsdrink/ouzo-app', '', $path);
         return $path;
+    }
+
+    private static function _replaceValue($path, $conf, $search, $replacement)
+    {
+        $configPath = Path::join($path, 'config', $conf, 'config.php');
+        $config = file_get_contents($configPath);
+        $configReplaced = str_replace($search, $replacement, $config);
+        file_put_contents($configPath, $configReplaced);
     }
 }
