@@ -90,7 +90,7 @@ class PostCreateProject
     {
         $configPath = Path::join($path, 'config', $conf, 'config.php');
         $config = file_get_contents($configPath);
-        $configReplaced = str_replace('ouzo-test', $db_name, $config);
+        $configReplaced = str_replace('app', $db_name, $config);
         file_put_contents($configPath, $configReplaced);
     }
 
