@@ -41,7 +41,7 @@ Database Configuration
 Sample project is using PostgreSQL by default. Database config can be found in Ouzo configuration file:
 
 ```php
-$config['db']['dbname'] = 'app';
+$config['db']['dbname'] = 'myproject';
 $config['db']['user'] = 'ouzo';
 $config['db']['pass'] = 'password';
 $config['db']['driver'] = 'pgsql';
@@ -55,11 +55,20 @@ You need to provide database name, user name & password, driver, host, port and 
 * MySQL - \\Ouzo\\Db\\Dialect\\MySqlDialect
 * SQLite3 - \\Ouzo\\Db\\Dialect\\Sqlite3Dialect
 
-Remember to create your database and database user first. For PostgreSQL:
+Remember to create your database and database user first.
+
+For MySQL:
 ```
-createuser -P ouzo
-createdb app
-GRANT ALL PRIVILEGES ON DATABASE app TO ouzo;
+CREATE DATABASE myproject;
+CREATE USER 'ouzo'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON myproject.* TO 'ouzo'@'localhost';
+```
+
+For PostgreSQL:
+```
+CREATE DATABASE myproject;
+CREATE USER ouzo WITH PASSWORD 'password';
+GRANT ALL PRIVILEGES ON DATABASE myproject to ouzo;
 ```
 
 Migrations
@@ -85,7 +94,19 @@ Open your favourite browser and go to http://localhost/myproject. Your first Ouz
 Running tests
 -------------
 
-Test configuration can be found in `config/test/config.php`. You will need separate database for tests purposes only. Set it up in the same way as production one, as described in Database Configuration section.
+Test configuration can be found in `config/test/config.php`. You will need separate database for tests purposes only. 
+
+Set up for MySQL:
+```
+CREATE DATABASE myproject_test;
+GRANT ALL PRIVILEGES ON myproject_test.* TO 'ouzo'@'localhost';
+```
+
+Set up for PostgreSQL:
+```
+CREATE DATABASE myproject_test;
+GRANT ALL PRIVILEGES ON DATABASE myproject_test to ouzo;
+```
 
 Apply migrations:
 ```
