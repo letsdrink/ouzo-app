@@ -43,14 +43,14 @@ Database Configuration
 Configuration is automatically generated for database of your choice. The only thing you need to do is to create database and database user first.
 
 For MySQL:
-```
+```sql
 CREATE DATABASE myproject;
 CREATE USER 'ouzo'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON myproject.* TO 'ouzo'@'localhost';
 ```
 
 For PostgreSQL:
-```
+```sql
 CREATE DATABASE myproject;
 CREATE USER ouzo WITH PASSWORD 'password';
 GRANT ALL PRIVILEGES ON DATABASE myproject to ouzo;
@@ -99,13 +99,13 @@ Running tests
 Test configuration can be found in `config/test/config.php`. You will need separate database for tests purposes only. 
 
 Set up for MySQL:
-```
+```sql
 CREATE DATABASE myproject_test;
 GRANT ALL PRIVILEGES ON myproject_test.* TO 'ouzo'@'localhost';
 ```
 
 Set up for PostgreSQL:
-```
+```sql
 CREATE DATABASE myproject_test;
 GRANT ALL PRIVILEGES ON DATABASE myproject_test to ouzo;
 ```
