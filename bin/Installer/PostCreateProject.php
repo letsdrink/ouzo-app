@@ -6,11 +6,48 @@ use Ouzo\Utilities\Path;
 
 class PostCreateProject
 {
+    public static function setConfig(Event $event)
+    {
+        $event->getIO()->write("\n<info>Which db you choose?<info>");
+        $event->getIO()->write("1) mysql \n2) sqlite3 \n3) postgres");
+        $db = $event->getIO()->ask("Choose [1], 2 or 3: ", '1');
+
+        $event->getIO()->write('You choose <info>' . $db . '</info>.');
+        self::_copyConfig($db, self::_getPath($event));
+    }
+
+    private static function _copyConfig($db, $path)
+    {
+        switch ($db) {
+            case 1:
+            {
+
+            }
+                break;
+
+            case 2:
+            {
+            }
+                break;
+
+            case 3:
+            {
+                $sourceProd = Path::join(__DIR__, 'stubs', 'postgres.prod.config.php.stub');
+                $sourceTest = Path::join(__DIR__, 'stubs', 'postgres.test.config.php.stub');
+
+                $destinationProd = Path::join($path, 'config', 'prod', 'config.php');
+                $destinationTest = Path::join($path, 'config', 'test', 'config.php');
+
+                copy($sourceProd, $destinationProd);
+                copy($sourceTest, $destinationTest);
+            }
+                break;
+        }
+    }
+
     public static function changePrefix(Event $event)
     {
-        $package = $event->getComposer()->getPackage();
-        $path = $event->getComposer()->getInstallationManager()->getInstallPath($package);
-        $path = str_replace('/vendor/letsdrink/ouzo-app', '', $path);
+        $path = self::_getPath($event);
         $prefix = basename($path);
         self::_changePrefix('prod', $path, $prefix);
         self::_changePrefix('test', $path, $prefix);
@@ -24,12 +61,11 @@ class PostCreateProject
         file_put_contents($configPath, $configReplaced);
     }
 
-    public static function setConfig(Event $event)
+    private static function _getPath(Event $event)
     {
-        $event->getIO()->write("\n<info>Which db you choose?<info>");
-        $event->getIO()->write("1) mysql \n2) sqlite3 \n3) postgres");
-        $db = $event->getIO()->ask("choose [1], 2 or 3: ", '1');
-
-        $event->getIO()->write('User choose: ' . $db);
+        $package = $event->getComposer()->getPackage();
+        $path = $event->getComposer()->getInstallationManager()->getInstallPath($package);
+        $path = str_replace('/vendor/letsdrink/ouzo-app', '', $path);
+        return $path;
     }
 }
