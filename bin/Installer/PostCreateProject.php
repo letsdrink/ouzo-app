@@ -21,7 +21,14 @@ class PostCreateProject
         switch ($db) {
             case 1:
             {
+                $sourceProd = Path::join(__DIR__, 'stubs', 'mysql.prod.config.php.stub');
+                $sourceTest = Path::join(__DIR__, 'stubs', 'mysql.test.config.php.stub');
 
+                $destinationProd = Path::join($path, 'config', 'prod', 'config.php');
+                $destinationTest = Path::join($path, 'config', 'test', 'config.php');
+
+                copy($sourceProd, $destinationProd);
+                copy($sourceTest, $destinationTest);
             }
                 break;
 
