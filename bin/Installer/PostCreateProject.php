@@ -13,51 +13,42 @@ class PostCreateProject
         $db = $event->getIO()->ask("Choose [1], 2 or 3: ", '1');
 
         $event->getIO()->write('You choose <info>' . $db . '</info>.');
-        self::_copyConfig($db, self::_getPath($event));
+        self::_prepareToCopyConfig($db, self::_getPath($event));
     }
 
-    private static function _copyConfig($db, $path)
+    private static function _prepareToCopyConfig($db, $path)
     {
         switch ($db) {
             case 1:
             {
-                $sourceProd = Path::join(__DIR__, 'stubs', 'mysql.prod.config.php.stub');
-                $sourceTest = Path::join(__DIR__, 'stubs', 'mysql.test.config.php.stub');
-
-                $destinationProd = Path::join($path, 'config', 'prod', 'config.php');
-                $destinationTest = Path::join($path, 'config', 'test', 'config.php');
-
-                copy($sourceProd, $destinationProd);
-                copy($sourceTest, $destinationTest);
+                self::_copyConfig($path, 'mysql');
             }
                 break;
 
             case 2:
             {
-                $sourceProd = Path::join(__DIR__, 'stubs', 'sqlite3.prod.config.php.stub');
-                $sourceTest = Path::join(__DIR__, 'stubs', 'sqlite3.test.config.php.stub');
-
-                $destinationProd = Path::join($path, 'config', 'prod', 'config.php');
-                $destinationTest = Path::join($path, 'config', 'test', 'config.php');
-
-                copy($sourceProd, $destinationProd);
-                copy($sourceTest, $destinationTest);
+                self::_copyConfig($path, 'sqlite3');
             }
                 break;
 
             case 3:
             {
-                $sourceProd = Path::join(__DIR__, 'stubs', 'postgres.prod.config.php.stub');
-                $sourceTest = Path::join(__DIR__, 'stubs', 'postgres.test.config.php.stub');
-
-                $destinationProd = Path::join($path, 'config', 'prod', 'config.php');
-                $destinationTest = Path::join($path, 'config', 'test', 'config.php');
-
-                copy($sourceProd, $destinationProd);
-                copy($sourceTest, $destinationTest);
+                self::_copyConfig($path, 'postgres');
             }
                 break;
         }
+    }
+
+    private static function _copyConfig($path, $type)
+    {
+        $sourceProd = Path::join(__DIR__, 'stubs', $type . '.prod.config.php.stub');
+        $sourceTest = Path::join(__DIR__, 'stubs', $type . '.test.config.php.stub');
+
+        $destinationProd = Path::join($path, 'config', 'prod', 'config.php');
+        $destinationTest = Path::join($path, 'config', 'test', 'config.php');
+
+        copy($sourceProd, $destinationProd);
+        copy($sourceTest, $destinationTest);
     }
 
     public static function changePrefix(Event $event)
