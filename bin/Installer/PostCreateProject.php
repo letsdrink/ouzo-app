@@ -25,7 +25,7 @@ class PostCreateProject
         } else {
             $event->getIO()->write('<error>' . $translated . '</error>');
         }
-        $event->getIO()->write('nFor more info about Ouzo check out http://ouzoframework.org');
+        $event->getIO()->write('For more info about Ouzo check out http://ouzoframework.org');
     }
 
     private static function _translateDbCode($code)
