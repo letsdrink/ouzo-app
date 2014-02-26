@@ -1,0 +1,8 @@
+<?php
+$config['db']['dbname'] = 'app';
+$config['db']['driver'] = 'sqlite';
+$config['sql_dialect'] = '\\Ouzo\\Db\\Dialect\\Sqlite3Dialect';
+$config['db']['dsn'] = 'sqlite:ouzo_test';
+$config['debug'] = true;
+
+return $config;

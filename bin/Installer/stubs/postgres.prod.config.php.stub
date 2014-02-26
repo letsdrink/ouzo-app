@@ -8,5 +8,5 @@ $config['db']['port'] = '5432';
 $config['global']['prefix_system'] = '/ouzo-test';
 $config['sql_dialect'] = '\\Ouzo\\Db\\Dialect\\PostgresDialect';
 $config['debug'] = true;
-$config['is_ok'] = true;
+
 return $config;
