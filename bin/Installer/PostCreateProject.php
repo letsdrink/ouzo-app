@@ -128,7 +128,8 @@ class PostCreateProject
     {
         $package = $event->getComposer()->getPackage();
         $path = $event->getComposer()->getInstallationManager()->getInstallPath($package);
-        $path = str_replace('/vendor/letsdrink/ouzo-app', '', $path);
+        $replacement = DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'letsdrink' . DIRECTORY_SEPARATOR . 'ouzo-app';
+        $path = str_replace($replacement, '', $path);
         return $path;
     }
 
