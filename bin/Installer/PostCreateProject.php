@@ -66,7 +66,10 @@ class PostCreateProject
             $db_name = self::_prepareNewDbName(basename($path));
             $newDbName = $conf == 'test' ? $db_name . '_test' : $db_name;
 
-            mkdir(Path::join($path, 'db', 'sqlite'));
+            $dir = Path::join($path, 'db', 'sqlite');
+            if (!file_exists($dir)) {
+                mkdir($dir);
+            }
 
             $dbNameWithPath = Path::join($path, 'db', 'sqlite', $newDbName);
             self::_replaceValue($path, $conf, 'sqlite:ouzo_test', 'sqlite:' . $dbNameWithPath);
