@@ -125,7 +125,7 @@ If all tests are passing, you're good to go!
 More
 ----
 
-Check out Ouzo tutorial:
+Skeleton app explained:
 https://github.com/letsdrink/ouzo/wiki/Tutorial
 
 Ouzo documentation:
