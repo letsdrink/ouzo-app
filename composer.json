@@ -22,6 +22,9 @@
         }
     },
     "scripts": {
-        "post-create-project-cmd": "Installer\\PostCreateProject::changePrefix"
+        "post-create-project-cmd": [
+            "Installer\\PostCreateProject::changePrefix",
+            "Installer\\PostCreateProject::setConfig"
+        ]
     }
 }

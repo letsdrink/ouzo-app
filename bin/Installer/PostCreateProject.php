@@ -23,4 +23,10 @@ class PostCreateProject
         $configReplaced = str_replace('ouzo-test', $prefix, $config);
         file_put_contents($configPath, $configReplaced);
     }
+
+    public static function setConfig(Event $event)
+    {
+        $db = $event->getIO()->ask('Which db you choose?', 'mysql');
+        $event->getIO()->write('User choose: ', $db);
+    }
 }
