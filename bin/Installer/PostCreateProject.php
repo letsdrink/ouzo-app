@@ -20,7 +20,7 @@ class PostCreateProject
         $translated = self::_translateDbCode($code);
 
         if (in_array($code, array(1, 2, 3))) {
-            $event->getIO()->write('Setting up <info>' . $code . ' - ' . $translated . '</info> - Done!');
+            $event->getIO()->write("<info>Setting up $translated Done!</info>");
             self::_prepareToCopyConfig($code, self::_getPath($event));
         } else {
             $event->getIO()->write('<error>' . $translated . '</error>');
