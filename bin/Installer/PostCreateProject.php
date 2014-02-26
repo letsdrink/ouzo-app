@@ -13,19 +13,17 @@ class PostCreateProject
         $event->getIO()->write("<info> 888   888  888   888     .d8P'   888   888<info>");
         $event->getIO()->write("<info> 888   888  888   888   .d8P'  .P 888   888<info>");
         $event->getIO()->write("<info> `Y8bod8P'  `V88V\"V8P' d8888888P  `Y8bod8P'<info>");
-        $event->getIO()->write("\n<info>            F R A M E W O R K<info>");
         $event->getIO()->write("\n[Ouzo] Choose a database that you want to use in your project (it can be changed later):");
-        $event->getIO()->write(" 1) MySQL / MariaDB \n 2) SQLite \n 3) PostgreSQL");
+        $event->getIO()->write("1) MySQL / MariaDB \n2) SQLite \n3) PostgreSQL");
         $code = $event->getIO()->ask("Choose [1], 2 or 3: ", '1');
         $translated = self::_translateDbCode($code);
 
         if (in_array($code, array(1, 2, 3))) {
-            $event->getIO()->write('\nSetting up <info>' . $code . ' - ' . $translated . '</info> (OK!)');
+            $event->getIO()->write('Your choice is: <info>' . $code . ' - ' . $translated . '</info>.');
             self::_prepareToCopyConfig($code, self::_getPath($event));
         } else {
             $event->getIO()->write('<error>' . $translated . '</error>');
         }
-        $event->getIO()->write('\nFor more info about Ouzo check out http://ouzoframework.org\n');
     }
 
     private static function _translateDbCode($code)
