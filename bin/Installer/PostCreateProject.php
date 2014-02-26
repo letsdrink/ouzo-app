@@ -83,7 +83,7 @@ class PostCreateProject
         $path = self::_getPath($event);
         $db_name = self::_prepareNewDbName(basename($path));
         self::_changeDbName('prod', $path, $db_name);
-        self::_changeDbName('test', $path, $db_name . '_test');
+        self::_changeDbName('test', $path, $db_name);
     }
 
     private static function _prepareNewDbName($db_name)
