@@ -18,7 +18,7 @@ class PostCreateProject
 
     private static function _changePrefix($conf, $path, $prefix)
     {
-        $configPath = Path::join($path, 'config', $conf, 'ConfigPanel.php');
+        $configPath = Path::join($path, 'config', $conf, 'config.php');
         $config = file_get_contents($configPath);
         $configReplaced = str_replace('ouzo-test', $prefix, $config);
         file_put_contents($configPath, $configReplaced);

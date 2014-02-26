@@ -1,5 +1,5 @@
 <?php
-$config = require_once RUCKUSING_WORKING_BASE . DIRECTORY_SEPARATOR . 'config/' . getenv('environment') . '/ConfigPanel.php';
+$config = require_once RUCKUSING_WORKING_BASE . DIRECTORY_SEPARATOR . 'config/' . getenv('environment') . '/config.php';
 
 return array(
     'db' => array(
