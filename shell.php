@@ -1,4 +1,6 @@
 <?php
+use Ouzo\Loader;
+use Ouzo\Shell\Dispatcher;
 
 putenv('environment=prod');
 
@@ -8,7 +10,7 @@ require 'vendor/autoload.php';
 
 include_once ROOT_PATH . 'config/routes.php';
 
-$loader = new \Ouzo\Loader();
+$loader = new Loader();
 $loader
     ->setIncludePath('application/')
     ->setIncludePath('lib/')
@@ -16,4 +18,4 @@ $loader
     ->setIncludePath('vendor/letsdrink/ouzo/bin/')
     ->register();
 
-\Ouzo\Shell\Dispatcher::runScript($argv);
+Dispatcher::runScript($argv);

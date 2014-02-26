@@ -1,5 +1,4 @@
 <?php
-
 use Ouzo\Bootstrap;
 
 require 'vendor/autoload.php';

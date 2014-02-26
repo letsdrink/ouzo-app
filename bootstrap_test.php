@@ -1,5 +1,5 @@
 <?php
-
+use Ouzo\Loader;
 use Ouzo\Utilities\Clock;
 
 error_reporting(E_ALL);
@@ -19,7 +19,7 @@ if (file_exists($routesFilename)) {
     include_once $routesFilename;
 }
 
-$loader = new \Ouzo\Loader();
+$loader = new Loader();
 $loader
     ->setIncludePath('custom/')
     ->setIncludePath('application/')
