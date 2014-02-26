@@ -17,7 +17,9 @@ Where `myproject` is your project's name.
 PHP Version
 -----------
 
-You need PHP 5.3 or newer installed. Currently Ouzo is tested on 5.3, 5.4 and 5.5 environments. You will need database driver as well, accordingly to the database your are using.
+You need:
+* PHP 5.3 or later installed. Currently Ouzo is tested on 5.3, 5.4 and 5.5 environments.
+* Database driver, accordingly to the database your are using.
 
 In order to get list of available drivers check http://www.php.net/manual/en/pdo.getavailabledrivers.php.
 
