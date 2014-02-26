@@ -69,6 +69,7 @@ class PostCreateProject
             $dir = Path::join($path, 'db', 'sqlite');
             if (!file_exists($dir)) {
                 mkdir($dir);
+                chmod($dir, 0777);
             }
 
             $dbNameWithPath = Path::join($path, 'db', 'sqlite', $newDbName);
