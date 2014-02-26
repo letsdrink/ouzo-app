@@ -40,7 +40,23 @@ What's important for now is that debug is turned on by default. Please, leave it
 Database Configuration
 ----------------------
 
-Sample project is using PostgreSQL by default. Database config can be found in Ouzo configuration file:
+Configuration is automatically generated for database of your choice. The only thing you need to do is to create database and database user first.
+
+For MySQL:
+```
+CREATE DATABASE myproject;
+CREATE USER 'ouzo'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON myproject.* TO 'ouzo'@'localhost';
+```
+
+For PostgreSQL:
+```
+CREATE DATABASE myproject;
+CREATE USER ouzo WITH PASSWORD 'password';
+GRANT ALL PRIVILEGES ON DATABASE myproject to ouzo;
+```
+
+If you do not use composer, sample project has PostgreSQL by default. Database config can be found in Ouzo configuration file:
 
 ```php
 $config['db']['dbname'] = 'myproject';
@@ -56,22 +72,6 @@ You need to provide database name, user name & password, driver, host, port and 
 * PostgreSQL - \\Ouzo\\Db\\Dialect\\PostgresDialect
 * MySQL - \\Ouzo\\Db\\Dialect\\MySqlDialect
 * SQLite3 - \\Ouzo\\Db\\Dialect\\Sqlite3Dialect
-
-Remember to create your database and database user first.
-
-For MySQL:
-```
-CREATE DATABASE myproject;
-CREATE USER 'ouzo'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON myproject.* TO 'ouzo'@'localhost';
-```
-
-For PostgreSQL:
-```
-CREATE DATABASE myproject;
-CREATE USER ouzo WITH PASSWORD 'password';
-GRANT ALL PRIVILEGES ON DATABASE myproject to ouzo;
-```
 
 Migrations
 ----------
