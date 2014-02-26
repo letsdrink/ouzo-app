@@ -20,12 +20,12 @@ class PostCreateProject
         $translated = self::_translateDbCode($code);
 
         if (in_array($code, array(1, 2, 3))) {
-            $event->getIO()->write('\nSetting up <info>' . $code . ' - ' . $translated . '</info> (OK!)');
+            $event->getIO()->write('Setting up <info>' . $code . ' - ' . $translated . '</info> - Done!');
             self::_prepareToCopyConfig($code, self::_getPath($event));
         } else {
             $event->getIO()->write('<error>' . $translated . '</error>');
         }
-        $event->getIO()->write('\nFor more info about Ouzo check out http://ouzoframework.org\n');
+        $event->getIO()->write('nFor more info about Ouzo check out http://ouzoframework.org');
     }
 
     private static function _translateDbCode($code)
