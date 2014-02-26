@@ -26,7 +26,8 @@ class PostCreateProject
 
     public static function setConfig(Event $event)
     {
-        $db = $event->getIO()->ask('Which db you choose? ', 'mysql');
+        $event->getIO()->write('Which db you choose?');
+        $db = $event->getIO()->ask('[1] mysql,  2 sqlite3,  3 postgres ', '1');
         $event->getIO()->write('User choose: '. $db);
     }
 }
