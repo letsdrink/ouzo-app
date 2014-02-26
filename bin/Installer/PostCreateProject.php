@@ -13,7 +13,7 @@ class PostCreateProject
         $event->getIO()->write("<info>888   888  888   888     .d8P'   888   888<info>");
         $event->getIO()->write("<info>888   888  888   888   .d8P'  .P 888   888<info>");
         $event->getIO()->write("<info>`Y8bod8P'  `V88V\"V8P' d8888888P  `Y8bod8P'<info>");
-        $event->getIO()->write("\n\n<info>[Ouzo] Choose a database that you want to use in your project (it can be changed later):<info>");
+        $event->getIO()->write("\n\n[Ouzo] Choose a database that you want to use in your project (it can be changed later):");
         $event->getIO()->write("1) MySQL / MariaDB \n2) SQLite \n3) PostgreSQL");
         $code = $event->getIO()->ask("Choose [1], 2 or 3: ", '1');
         $translated = self::_translateDbCode($code);
