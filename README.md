@@ -29,7 +29,7 @@ Ouzo apps can be run on Apache web server. It needs mod_rewrite enabled. Once yo
 Ouzo Configuration
 ------------------
 
-Ouzo configuration is located under `config/prod/Config.php`.
+Ouzo configuration is located under `config/prod/config.php`.
 
 What's important for now is that debug is turned on by default. Please, leave it like this for installation purposes, as you will be able to see detailed error messages in case something goes wrong.
 
@@ -83,7 +83,7 @@ Open your favourite browser and go to http://localhost/myproject. Your first Ouz
 Running tests
 -------------
 
-Test configuration can be found in `config/test/Config.php`. You will need separate database for tests purposes only. Set it up in the same way as production one, as described in Database Configration section.
+Test configuration can be found in `config/test/config.php`. You will need separate database for tests purposes only. Set it up in the same way as production one, as described in Database Configuration section.
 
 Apply migrations:
 ```
