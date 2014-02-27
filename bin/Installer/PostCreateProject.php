@@ -129,8 +129,9 @@ class PostCreateProject
     {
         $package = $event->getComposer()->getPackage();
         $path = $event->getComposer()->getInstallationManager()->getInstallPath($package);
-        $replacement = DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'letsdrink' . DIRECTORY_SEPARATOR . 'ouzo-app';
-        $path = str_replace($replacement, '', $path);
+        $standardPath = str_replace(array('\\', '/'), DIRECTORY_SEPARATOR, $path);
+        $replacement = Path::join('vendor', 'letsdrink', 'ouzo-app');
+        $path = str_replace($replacement, '', $standardPath);
         return $path;
     }
 
