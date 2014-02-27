@@ -115,7 +115,7 @@ class PostCreateProject
 
     private static function _prepareNewDbName($db_name)
     {
-        return preg_replace('/\W/', '_', $db_name);
+        return strtolower(preg_replace('/\W/', '_', $db_name));
     }
 
     private static function _changeDbName($conf, $path, $db_name)
