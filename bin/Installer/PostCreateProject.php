@@ -22,7 +22,6 @@ class PostCreateProject
         if (in_array($code, array(1, 2, 3))) {
             $event->getIO()->write("<info>Setting up $translated Done!</info>");
             $path = self::_getPath($event);
-            var_dump("path", $path);
             self::_prepareToCopyConfig($code, $path);
             self::_changeDnsIfSqlite3($code, $path, 'prod');
             self::_changeDnsIfSqlite3($code, $path, 'test');
@@ -89,7 +88,6 @@ class PostCreateProject
 
         $destinationProd = Path::join($path, 'config', 'prod', 'config.php');
         $destinationTest = Path::join($path, 'config', 'test', 'config.php');
-        var_dump("copy", $sourceProd, $destinationProd);
         copy($sourceProd, $destinationProd);
         copy($sourceTest, $destinationTest);
     }
