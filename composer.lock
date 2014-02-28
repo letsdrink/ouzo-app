@@ -3,24 +3,24 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "d2e1ed28560cd6de47d9954e1a45145d",
+    "hash": "0f7ff96ea9503828402462c3dc160612",
     "packages": [
         {
             "name": "letsdrink/ouzo",
-            "version": "dev-master",
+            "version": "1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/letsdrink/ouzo.git",
-                "reference": "e228630d9d54d2a736f55611548700290f2c21b5"
+                "reference": "3ba15de4a52a6cc1f9e72763b07680f77b052792"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/e228630d9d54d2a736f55611548700290f2c21b5",
-                "reference": "e228630d9d54d2a736f55611548700290f2c21b5",
+                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/3ba15de4a52a6cc1f9e72763b07680f77b052792",
+                "reference": "3ba15de4a52a6cc1f9e72763b07680f77b052792",
                 "shasum": ""
             },
             "require-dev": {
-                "phpunit/phpunit": "3.7.28",
+                "phpunit/phpunit": "3.7.*@dev",
                 "satooshi/php-coveralls": "dev-master"
             },
             "type": "library",
@@ -35,8 +35,8 @@
             ],
             "authors": [
                 {
-                    "name": "Thulium",
-                    "email": "letsdrink@thulium.pl"
+                    "name": "Ouzo developers",
+                    "email": "ouzo@thulium.eu"
                 }
             ],
             "description": "Ouzo PHP MVC framework",
@@ -47,7 +47,7 @@
                 "orm",
                 "php"
             ],
-            "time": "2014-02-26 15:29:46"
+            "time": "2014-02-27 16:35:27"
         },
         {
             "name": "ruckusing/ruckusing-migrations",
@@ -112,12 +112,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "5b0dc99fec6d2233db57d97cac3dd15824ea21f7"
+                "reference": "0d4c2bb7d7a864a9b3e876908e743310cdeaa5e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/5b0dc99fec6d2233db57d97cac3dd15824ea21f7",
-                "reference": "5b0dc99fec6d2233db57d97cac3dd15824ea21f7",
+                "url": "https://api.github.com/repos/composer/composer/zipball/0d4c2bb7d7a864a9b3e876908e743310cdeaa5e6",
+                "reference": "0d4c2bb7d7a864a9b3e876908e743310cdeaa5e6",
                 "shasum": ""
             },
             "require": {
@@ -173,7 +173,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2014-02-26 16:20:47"
+            "time": "2014-02-26 16:38:58"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -449,7 +449,6 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "letsdrink/ouzo": 20,
         "ruckusing/ruckusing-migrations": 20,
         "composer/composer": 20
     },
