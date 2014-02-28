@@ -23,8 +23,8 @@ class PostCreateProject
             $event->getIO()->write("<info>Setting up $translated Done!</info>");
             $path = self::_getPath($event);
             self::_prepareToCopyConfig($code, $path);
-            self::_changeDnsIfSqlite3($code, $path, 'prod');
-            self::_changeDnsIfSqlite3($code, $path, 'test');
+            self::_changeDnsAndBatabaseIfSqlite3($code, $path, 'prod');
+            self::_changeDnsAndBatabaseIfSqlite3($code, $path, 'test');
         } else {
             $event->getIO()->write('<error>' . $translated . '</error>');
         }
@@ -60,7 +60,7 @@ class PostCreateProject
         }
     }
 
-    private static function _changeDnsIfSqlite3($code, $path, $conf)
+    private static function _changeDnsAndBatabaseIfSqlite3($code, $path, $conf)
     {
         if ($code == 2) {
             $db_name = self::_prepareNewDbName(basename($path));
@@ -74,10 +74,7 @@ class PostCreateProject
 
             $dbNameWithPath = Path::join($path, 'db', 'sqlite', $newDbName);
             self::_replaceValue($path, $conf, 'sqlite:ouzo_test', 'sqlite:' . $dbNameWithPath);
-
-            $source = Path::join(__DIR__, 'stubs', 'sqlite3_db');
-            copy($source, $dbNameWithPath);
-            chmod($dbNameWithPath, 0777);
+            self::_replaceValue($path, $conf, 'database_path', $dbNameWithPath);
         }
     }
 
