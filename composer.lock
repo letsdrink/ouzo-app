@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "9049f767a3aac81748e72be37226d976",
+    "hash": "b188195335e3248d189db34402c2ff21",
     "packages": [
         {
             "name": "letsdrink/ouzo",
