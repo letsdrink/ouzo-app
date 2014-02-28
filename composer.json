@@ -11,7 +11,7 @@
     ],
     "require": {
         "letsdrink/ouzo": "1.0",
-        "letsdrink/ruckusing-migrations": "dev-master"
+        "ruckusing/ruckusing-migrations": "dev-master"
     },
     "require-dev": {
         "composer/composer": "dev-master"
@@ -27,11 +27,5 @@
             "Installer\\PostCreateProject::changePrefix",
             "Installer\\PostCreateProject::changeDbName"
         ]
-    },
-    "repositories": [
-        {
-            "type": "git",
-            "url":  "https://github.com/letsdrink/ruckusing-migrations.git"
-        }
-    ]
+    }
 }
