@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/letsdrink/ouzo.git",
-                "reference": "3ba15de4a52a6cc1f9e72763b07680f77b052792"
+                "reference": "c8edde680b2338659b5cf2032f841e253cd168f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/3ba15de4a52a6cc1f9e72763b07680f77b052792",
-                "reference": "3ba15de4a52a6cc1f9e72763b07680f77b052792",
+                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/c8edde680b2338659b5cf2032f841e253cd168f6",
+                "reference": "c8edde680b2338659b5cf2032f841e253cd168f6",
                 "shasum": ""
             },
             "require-dev": {
@@ -47,7 +47,7 @@
                 "orm",
                 "php"
             ],
-            "time": "2014-02-27 16:35:27"
+            "time": "2014-02-28 09:59:24"
         },
         {
             "name": "ruckusing/ruckusing-migrations",
@@ -55,12 +55,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ruckus/ruckusing-migrations.git",
-                "reference": "6c7a26ccd96a4ac980f3fc47c6645458ed918406"
+                "reference": "084d1f9043990f7ae5761e40d4e730c9c88b93b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ruckus/ruckusing-migrations/zipball/6c7a26ccd96a4ac980f3fc47c6645458ed918406",
-                "reference": "6c7a26ccd96a4ac980f3fc47c6645458ed918406",
+                "url": "https://api.github.com/repos/ruckus/ruckusing-migrations/zipball/084d1f9043990f7ae5761e40d4e730c9c88b93b5",
+                "reference": "084d1f9043990f7ae5761e40d4e730c9c88b93b5",
                 "shasum": ""
             },
             "require": {
@@ -102,7 +102,7 @@
                 "ruckusing",
                 "task"
             ],
-            "time": "2013-09-11 17:32:07"
+            "time": "2014-05-13 14:37:16"
         }
     ],
     "packages-dev": [
@@ -112,12 +112,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "0d4c2bb7d7a864a9b3e876908e743310cdeaa5e6"
+                "reference": "0c85ca426d6e8235366340f29ad0e6aab1747b83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/0d4c2bb7d7a864a9b3e876908e743310cdeaa5e6",
-                "reference": "0d4c2bb7d7a864a9b3e876908e743310cdeaa5e6",
+                "url": "https://api.github.com/repos/composer/composer/zipball/0c85ca426d6e8235366340f29ad0e6aab1747b83",
+                "reference": "0c85ca426d6e8235366340f29ad0e6aab1747b83",
                 "shasum": ""
             },
             "require": {
@@ -163,7 +163,8 @@
                 {
                     "name": "Nils Adermann",
                     "email": "naderman@naderman.de",
-                    "homepage": "http://www.naderman.de"
+                    "homepage": "http://www.naderman.de",
+                    "role": "Developer"
                 }
             ],
             "description": "Composer helps you declare, manage and install dependencies of PHP projects, ensuring you have the right stack everywhere.",
@@ -173,7 +174,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2014-02-26 16:38:58"
+            "time": "2014-05-19 10:17:07"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -181,12 +182,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/justinrainbow/json-schema.git",
-                "reference": "01949f6d2130e9737ffae5d3952909a8de70d114"
+                "reference": "d97cf3ce890fe80f247fc08594a1c8a1029fc7ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/01949f6d2130e9737ffae5d3952909a8de70d114",
-                "reference": "01949f6d2130e9737ffae5d3952909a8de70d114",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/d97cf3ce890fe80f247fc08594a1c8a1029fc7ed",
+                "reference": "d97cf3ce890fe80f247fc08594a1c8a1029fc7ed",
                 "shasum": ""
             },
             "require": {
@@ -241,7 +242,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2013-12-13 15:21:04"
+            "time": "2014-03-05 15:03:52"
         },
         {
             "name": "seld/jsonlint",
@@ -297,21 +298,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "afee08520a971c0f073bff89e1d456405e244c37"
+                "reference": "50be4f30d0a93404e5d62b05fd7294492cf64c4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/afee08520a971c0f073bff89e1d456405e244c37",
-                "reference": "afee08520a971c0f073bff89e1d456405e244c37",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/50be4f30d0a93404e5d62b05fd7294492cf64c4f",
+                "reference": "50be4f30d0a93404e5d62b05fd7294492cf64c4f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
+                "psr/log": "~1.0",
                 "symfony/event-dispatcher": "~2.1"
             },
             "suggest": {
+                "psr/log": "For using the console logger",
                 "symfony/event-dispatcher": ""
             },
             "type": "library",
@@ -343,7 +346,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-02-18 15:41:30"
+            "time": "2014-05-15 08:56:35"
         },
         {
             "name": "symfony/finder",
@@ -352,12 +355,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "a708807d3a54b258abb5bda6832ced8b9bbf8ffb"
+                "reference": "1343b576d1401f4a5117cab4e250201ae348143a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/a708807d3a54b258abb5bda6832ced8b9bbf8ffb",
-                "reference": "a708807d3a54b258abb5bda6832ced8b9bbf8ffb",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/1343b576d1401f4a5117cab4e250201ae348143a",
+                "reference": "1343b576d1401f4a5117cab4e250201ae348143a",
                 "shasum": ""
             },
             "require": {
@@ -392,7 +395,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2014-02-24 16:21:51"
+            "time": "2014-05-12 09:28:39"
         },
         {
             "name": "symfony/process",
@@ -401,12 +404,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "0ae3bf5ff90edbe6e30e645221646479c2f1ef54"
+                "reference": "8a3edace8e8aabed8992b993bfc13df3b1e836f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/0ae3bf5ff90edbe6e30e645221646479c2f1ef54",
-                "reference": "0ae3bf5ff90edbe6e30e645221646479c2f1ef54",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/8a3edace8e8aabed8992b993bfc13df3b1e836f2",
+                "reference": "8a3edace8e8aabed8992b993bfc13df3b1e836f2",
                 "shasum": ""
             },
             "require": {
@@ -441,7 +444,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2014-02-24 16:21:51"
+            "time": "2014-04-28 05:15:04"
         }
     ],
     "aliases": [
