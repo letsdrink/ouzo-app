@@ -1,6 +1,8 @@
 <?php
 use Ouzo\Loader;
 use Ouzo\Utilities\Clock;
+use Ouzo\Utilities\Files;
+use Ouzo\Utilities\Path;
 
 error_reporting(E_ALL);
 
@@ -10,14 +12,12 @@ define('ROOT_PATH', realpath(dirname(__FILE__)) . DIRECTORY_SEPARATOR);
 
 require 'vendor/autoload.php';
 
-require_once ROOT_PATH . 'vendor/letsdrink/ouzo/src/Ouzo/Loader.php';
-require_once ROOT_PATH . 'vendor/letsdrink/ouzo/src/Ouzo/FrontController.php';
-require_once ROOT_PATH . 'vendor/letsdrink/ouzo/src/Ouzo/Error.php';
-$routesFilename = ROOT_PATH . 'config/routes.php';
+Files::loadIfExists(Path::join(ROOT_PATH, 'vendor', 'letsdrink', 'ouzo', 'src', 'Ouzo', 'Loader.php'));
+Files::loadIfExists(Path::join(ROOT_PATH, 'vendor', 'letsdrink', 'ouzo', 'src', 'Ouzo', 'FrontController.php'));
+Files::loadIfExists(Path::join(ROOT_PATH, 'vendor', 'letsdrink', 'ouzo', 'src', 'Ouzo', 'ExceptionHandling', 'ErrorHandler.php'));
 
-if (file_exists($routesFilename)) {
-    include_once $routesFilename;
-}
+Files::loadIfExists(Path::join(ROOT_PATH, 'config', 'error_codes.php'));
+Files::loadIfExists(Path::join(ROOT_PATH, 'config', 'routes.php'));
 
 $loader = new Loader();
 $loader
