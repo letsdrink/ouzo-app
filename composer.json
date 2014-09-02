@@ -19,7 +19,13 @@
     "autoload": {
         "psr-0": {
             "Installer": "bin/"
-        }
+        },
+        "classmap": [
+            "application/",
+            "locales/",
+            "test/application/",
+            "seed/"
+        ]
     },
     "scripts": {
         "post-create-project-cmd": [
