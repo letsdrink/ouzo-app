@@ -6,7 +6,7 @@ How to use Ouzo step by step. It takes only 5 minutes to set up sample project a
 Set up project
 --------------
 
-Simply use composer ( http://getcomposer.org ):
+Simply use composer (http://getcomposer.org):
 
 ```
 composer.phar create-project letsdrink/ouzo-app:dev-master myproject
@@ -20,7 +20,7 @@ PHP Version
 -----------
 
 You need:
-* PHP 5.3 or later installed. Currently Ouzo is tested on 5.3, 5.4 and 5.5 environments.
+* PHP 5.3 or later installed. Currently Ouzo is tested on 5.3, 5.4, 5.5 and 5.6 environments.
 * Database driver, accordingly to the database your are using.
 
 In order to get list of available drivers check http://www.php.net/manual/en/pdo.getavailabledrivers.php.
