@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Ouzo Framework :: Bootstrap</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+
+    <?php echo addFile(array('type' => 'link', 'params' => array('url' => '/public/css/style.css'))); ?>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="http://ouzoframework.org"><img src="<?php echo url(array('string' => '/public/images/logo.png')); ?> "></a>
+        </div>
+    </header>
+
+    <div class="content">
+        <?php echo $this->layoutContent(); ?>
+    </div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
