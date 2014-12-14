@@ -13,7 +13,7 @@ before_script:
     - echo 'date.timezone = "Europe/Warsaw"' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
     - composer install
     - psql -c 'create database app_test' -U postgres
-    - environment=test db.sh db:migrate
+    - environment=test ./db.sh db:migrate
 
 script:
     - phpunit --configuration phpunit.xml test
