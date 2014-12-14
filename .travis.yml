@@ -12,7 +12,7 @@ env:
 before_script:
     - echo 'date.timezone = "Europe/Warsaw"' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
     - composer install
-    - psql -c 'create database app_test' -U postgres
+    - psql -c 'create database ouzo_test' -U postgres
     - environment=test ./db.sh db:migrate
 
 script:
