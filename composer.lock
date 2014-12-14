@@ -4,29 +4,29 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8b11b05e32d46a918816db93bac09df9",
+    "hash": "a9dc77e9a12f5c3b17b47fca08c5c779",
     "packages": [
         {
             "name": "d11wtq/boris",
-            "version": "dev-master",
+            "version": "v1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/d11wtq/boris.git",
-                "reference": "2a0a3d3a5f34d317577f8dcd98f5f578ad85109a"
+                "reference": "125dd4e5752639af7678a22ea597115646d89c6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/d11wtq/boris/zipball/2a0a3d3a5f34d317577f8dcd98f5f578ad85109a",
-                "reference": "2a0a3d3a5f34d317577f8dcd98f5f578ad85109a",
+                "url": "https://api.github.com/repos/d11wtq/boris/zipball/125dd4e5752639af7678a22ea597115646d89c6e",
+                "reference": "125dd4e5752639af7678a22ea597115646d89c6e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "suggest": {
-                "ext-pcntl": "Optional Process Control extension depencency",
-                "ext-posix": "Optional POSIX extension",
-                "ext-readline": "Optional readline extension depencency"
+                "ext-pcntl": "*",
+                "ext-posix": "*",
+                "ext-readline": "*"
             },
             "bin": [
                 "bin/boris"
@@ -38,7 +38,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2014-07-31 12:15:24"
+            "time": "2014-01-17 12:21:18"
         },
         {
             "name": "letsdrink/ouzo",
@@ -46,31 +46,28 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/letsdrink/ouzo.git",
-                "reference": "ebee452ef8028020c5555a5b8794c5643bb23a3e"
+                "reference": "20177841bf4001dfc602315eaf462ad3bc796382"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/ebee452ef8028020c5555a5b8794c5643bb23a3e",
-                "reference": "ebee452ef8028020c5555a5b8794c5643bb23a3e",
+                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/20177841bf4001dfc602315eaf462ad3bc796382",
+                "reference": "20177841bf4001dfc602315eaf462ad3bc796382",
                 "shasum": ""
             },
             "require": {
-                "d11wtq/boris": "dev-master",
-                "symfony/console": "2.5.0"
+                "d11wtq/boris": "1.0.8",
+                "symfony/console": "2.5.7"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.0.*@dev",
+                "phpunit/phpunit": "4.3.3",
                 "satooshi/php-coveralls": "dev-master"
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Ouzo": "src/",
-                    "": "bin/"
-                },
-                "classmap": [
-                    "test/"
-                ]
+                "psr-4": {
+                    "Ouzo\\": "src\\Ouzo",
+                    "Command\\": "bin"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -79,7 +76,7 @@
             "authors": [
                 {
                     "name": "Ouzo developers",
-                    "email": "ouzo@thulium.eu"
+                    "email": "ouzo-framework@googlegroups.com"
                 }
             ],
             "description": "Ouzo PHP MVC framework",
@@ -91,7 +88,7 @@
                 "orm",
                 "php"
             ],
-            "time": "2014-08-28 13:15:17"
+            "time": "2014-12-14 19:53:27"
         },
         {
             "name": "ruckusing/ruckusing-migrations",
@@ -99,12 +96,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ruckus/ruckusing-migrations.git",
-                "reference": "5987020be2878e6ae2a8bd9c9ef12fc2a901a933"
+                "reference": "eca7a07febe77ef589ae7fb9ffd69ab08f552836"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ruckus/ruckusing-migrations/zipball/5987020be2878e6ae2a8bd9c9ef12fc2a901a933",
-                "reference": "5987020be2878e6ae2a8bd9c9ef12fc2a901a933",
+                "url": "https://api.github.com/repos/ruckus/ruckusing-migrations/zipball/eca7a07febe77ef589ae7fb9ffd69ab08f552836",
+                "reference": "eca7a07febe77ef589ae7fb9ffd69ab08f552836",
                 "shasum": ""
             },
             "require": {
@@ -146,21 +143,21 @@
                 "ruckusing",
                 "task"
             ],
-            "time": "2014-07-22 15:38:14"
+            "time": "2014-12-11 19:04:37"
         },
         {
             "name": "symfony/console",
-            "version": "v2.5.0",
+            "version": "v2.5.7",
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "ef4ca73b0b3a10cbac653d3ca482d0cdd4502b2c"
+                "reference": "61b13c27c9258e97009249d4ef193c964bf346b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/ef4ca73b0b3a10cbac653d3ca482d0cdd4502b2c",
-                "reference": "ef4ca73b0b3a10cbac653d3ca482d0cdd4502b2c",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/61b13c27c9258e97009249d4ef193c964bf346b7",
+                "reference": "61b13c27c9258e97009249d4ef193c964bf346b7",
                 "shasum": ""
             },
             "require": {
@@ -191,19 +188,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-05-22 08:54:24"
+            "time": "2014-11-20 13:22:25"
         }
     ],
     "packages-dev": [
@@ -213,24 +208,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "1e27ff5e22df81e3cd0cd36e5fdd4a3c5a031f4a"
+                "reference": "523aef76d0fa29c18bf42264e88fc9b58acf825c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/1e27ff5e22df81e3cd0cd36e5fdd4a3c5a031f4a",
-                "reference": "1e27ff5e22df81e3cd0cd36e5fdd4a3c5a031f4a",
+                "url": "https://api.github.com/repos/composer/composer/zipball/523aef76d0fa29c18bf42264e88fc9b58acf825c",
+                "reference": "523aef76d0fa29c18bf42264e88fc9b58acf825c",
                 "shasum": ""
             },
             "require": {
                 "justinrainbow/json-schema": "~1.1",
                 "php": ">=5.3.2",
-                "seld/jsonlint": "1.*",
+                "seld/jsonlint": "~1.0",
                 "symfony/console": "~2.3",
                 "symfony/finder": "~2.2",
                 "symfony/process": "~2.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "~3.7"
+                "phpunit/phpunit": "~4.0"
             },
             "suggest": {
                 "ext-openssl": "Enabling the openssl extension allows you to access https URLs for repositories and packages",
@@ -273,7 +268,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2014-08-11 15:46:48"
+            "time": "2014-12-14 13:46:37"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -343,16 +338,16 @@
         },
         {
             "name": "seld/jsonlint",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/jsonlint.git",
-                "reference": "9cae56dbe34f4392e7d0f559474df33749a39f8d"
+                "reference": "a7bc2ec9520ad15382292591b617c43bdb1fec35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/9cae56dbe34f4392e7d0f559474df33749a39f8d",
-                "reference": "9cae56dbe34f4392e7d0f559474df33749a39f8d",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/a7bc2ec9520ad15382292591b617c43bdb1fec35",
+                "reference": "a7bc2ec9520ad15382292591b617c43bdb1fec35",
                 "shasum": ""
             },
             "require": {
@@ -385,21 +380,21 @@
                 "parser",
                 "validator"
             ],
-            "time": "2014-07-20 17:36:11"
+            "time": "2014-09-05 15:36:20"
         },
         {
             "name": "symfony/finder",
-            "version": "dev-master",
+            "version": "2.7.x-dev",
             "target-dir": "Symfony/Component/Finder",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "d43931fa00edf66b9f83dc624c36d67b0c74a509"
+                "reference": "5f69e63177e3cb369040f3facbb21bb87da114bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/d43931fa00edf66b9f83dc624c36d67b0c74a509",
-                "reference": "d43931fa00edf66b9f83dc624c36d67b0c74a509",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/5f69e63177e3cb369040f3facbb21bb87da114bc",
+                "reference": "5f69e63177e3cb369040f3facbb21bb87da114bc",
                 "shasum": ""
             },
             "require": {
@@ -408,7 +403,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
             "autoload": {
@@ -432,21 +427,21 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2014-08-31 03:28:38"
+            "time": "2014-12-12 16:23:01"
         },
         {
             "name": "symfony/process",
-            "version": "dev-master",
+            "version": "2.7.x-dev",
             "target-dir": "Symfony/Component/Process",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "8f1f4e4329d3dc9fe08a7106417168145301e49f"
+                "reference": "e48a06acc112f2b76d6e5ac7e7eaa01a9305d146"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/8f1f4e4329d3dc9fe08a7106417168145301e49f",
-                "reference": "8f1f4e4329d3dc9fe08a7106417168145301e49f",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/e48a06acc112f2b76d6e5ac7e7eaa01a9305d146",
+                "reference": "e48a06acc112f2b76d6e5ac7e7eaa01a9305d146",
                 "shasum": ""
             },
             "require": {
@@ -455,7 +450,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
             "autoload": {
@@ -479,12 +474,10 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2014-08-31 03:28:38"
+            "time": "2014-12-12 16:23:01"
         }
     ],
-    "aliases": [
-
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
         "letsdrink/ouzo": 20,
@@ -492,10 +485,6 @@
         "composer/composer": 20
     },
     "prefer-stable": false,
-    "platform": [
-
-    ],
-    "platform-dev": [
-
-    ]
+    "platform": [],
+    "platform-dev": []
 }

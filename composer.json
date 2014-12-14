@@ -17,13 +17,17 @@
         "composer/composer": "dev-master"
     },
     "autoload": {
-        "psr-0": {
-            "Installer": "bin/"
+        "psr-4": {
+            "Application\\": "Application/",
+            "Installer\\": "bin/Installer"
         },
         "classmap": [
-            "application/",
-            "locales/",
-            "test/application/",
+            "locales/"
+        ]
+    },
+    "autoload-dev": {
+        "classmap": [
+            "test/",
             "seed/"
         ]
     },
