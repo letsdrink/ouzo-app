@@ -1,5 +1,5 @@
 <?php
-namespace Model;
+namespace Application\Model;
 
 use Ouzo\Model;
 

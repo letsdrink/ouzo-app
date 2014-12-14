@@ -1,7 +1,7 @@
 <?php
-namespace Controller;
+namespace Application\Controller;
 
-use Model\User;
+use Application\Model\User;
 use Ouzo\Controller;
 
 class UsersController extends Controller
