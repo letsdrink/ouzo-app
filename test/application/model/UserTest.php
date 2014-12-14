@@ -1,6 +1,6 @@
 <?php
 
-use Model\User;
+use Application\Model\User;
 use Ouzo\Tests\DbTransactionalTestCase;
 
 class UserTest extends DbTransactionalTestCase
@@ -19,5 +19,4 @@ class UserTest extends DbTransactionalTestCase
         //then
         $this->assertEquals($user, User::where(array('login' => 'user1'))->fetch());
     }
-
 }

@@ -1,6 +1,6 @@
 <?php
 
-use Model\User;
+use Application\Model\User;
 use Ouzo\Tests\ControllerTestCase;
 
 class UsersControllerTest extends ControllerTestCase
@@ -10,8 +10,6 @@ class UsersControllerTest extends ControllerTestCase
      */
     public function shouldRenderIndex()
     {
-        //given
-
         //when
         $this->get('/users');
 
