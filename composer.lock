@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "968e331be0ca9dbdcf29f1cf8ee3b2d9",
+    "hash": "8d7498277d8008493e814d13ff6f7ec5",
     "packages": [
         {
             "name": "d11wtq/boris",
@@ -46,12 +46,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/letsdrink/ouzo.git",
-                "reference": "f958a1e50beab404aa98246d1c5746f91ae200e9"
+                "reference": "0331e03e9b76f196f165b9f0c582202772cc9d69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/f958a1e50beab404aa98246d1c5746f91ae200e9",
-                "reference": "f958a1e50beab404aa98246d1c5746f91ae200e9",
+                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/0331e03e9b76f196f165b9f0c582202772cc9d69",
+                "reference": "0331e03e9b76f196f165b9f0c582202772cc9d69",
                 "shasum": ""
             },
             "require": {
@@ -88,20 +88,20 @@
                 "orm",
                 "php"
             ],
-            "time": "2014-12-16 16:21:58"
+            "time": "2014-12-16 16:32:51"
         },
         {
             "name": "ruckusing/ruckusing-migrations",
-            "version": "dev-master",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ruckus/ruckusing-migrations.git",
-                "reference": "eca7a07febe77ef589ae7fb9ffd69ab08f552836"
+                "reference": "c75869068e031c5d66aa4a23b46dec0cc9a948cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ruckus/ruckusing-migrations/zipball/eca7a07febe77ef589ae7fb9ffd69ab08f552836",
-                "reference": "eca7a07febe77ef589ae7fb9ffd69ab08f552836",
+                "url": "https://api.github.com/repos/ruckus/ruckusing-migrations/zipball/c75869068e031c5d66aa4a23b46dec0cc9a948cd",
+                "reference": "c75869068e031c5d66aa4a23b46dec0cc9a948cd",
                 "shasum": ""
             },
             "require": {
@@ -143,7 +143,7 @@
                 "ruckusing",
                 "task"
             ],
-            "time": "2014-12-11 19:04:37"
+            "time": "2014-07-22 15:35:47"
         },
         {
             "name": "symfony/console",
@@ -481,7 +481,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "letsdrink/ouzo": 20,
-        "ruckusing/ruckusing-migrations": 20,
         "composer/composer": 20
     },
     "prefer-stable": false,

@@ -6,12 +6,12 @@
     "authors": [
         {
             "name": "Ouzo developers",
-            "email": "ouzo@thulium.eu"
+            "email": "ouzo-framework@googlegroups.com"
         }
     ],
     "require": {
         "letsdrink/ouzo": "dev-master",
-        "ruckusing/ruckusing-migrations": "dev-master"
+        "ruckusing/ruckusing-migrations": "1.0.3"
     },
     "require-dev": {
         "composer/composer": "dev-master"
