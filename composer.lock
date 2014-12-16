@@ -46,12 +46,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/letsdrink/ouzo.git",
-                "reference": "4d40410bca2ffaf3b128be0010e782277c087f6e"
+                "reference": "04e3a6afb10c4e37f8f774a2aebf830ac489361c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/4d40410bca2ffaf3b128be0010e782277c087f6e",
-                "reference": "4d40410bca2ffaf3b128be0010e782277c087f6e",
+                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/04e3a6afb10c4e37f8f774a2aebf830ac489361c",
+                "reference": "04e3a6afb10c4e37f8f774a2aebf830ac489361c",
                 "shasum": ""
             },
             "require": {
@@ -88,7 +88,7 @@
                 "orm",
                 "php"
             ],
-            "time": "2014-12-16 15:11:36"
+            "time": "2014-12-16 15:17:35"
         },
         {
             "name": "ruckusing/ruckusing-migrations",
