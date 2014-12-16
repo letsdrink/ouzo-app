@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "letsdrink/ouzo": "dev-master",
+        "letsdrink/ouzo": "1.3",
         "ruckusing/ruckusing-migrations": "1.0.3"
     },
     "require-dev": {
