@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "17d995e8e9cff4ebb6bcf32132c3df65",
+    "hash": "968e331be0ca9dbdcf29f1cf8ee3b2d9",
     "packages": [
         {
             "name": "d11wtq/boris",
@@ -46,12 +46,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/letsdrink/ouzo.git",
-                "reference": "04e3a6afb10c4e37f8f774a2aebf830ac489361c"
+                "reference": "032d2adbce7378959c2e56413c610462c1195b1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/04e3a6afb10c4e37f8f774a2aebf830ac489361c",
-                "reference": "04e3a6afb10c4e37f8f774a2aebf830ac489361c",
+                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/032d2adbce7378959c2e56413c610462c1195b1f",
+                "reference": "032d2adbce7378959c2e56413c610462c1195b1f",
                 "shasum": ""
             },
             "require": {
@@ -88,7 +88,7 @@
                 "orm",
                 "php"
             ],
-            "time": "2014-12-16 15:17:35"
+            "time": "2014-12-16 15:45:04"
         },
         {
             "name": "ruckusing/ruckusing-migrations",

@@ -19,7 +19,7 @@
     "autoload": {
         "psr-4": {
             "Application\\": "Application/",
-            "Installer\\": "bin/Installer"
+            "Installer\\": "bin/Installer/"
         },
         "classmap": [
             "locales/"
