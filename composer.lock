@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a9dc77e9a12f5c3b17b47fca08c5c779",
+    "hash": "17d995e8e9cff4ebb6bcf32132c3df65",
     "packages": [
         {
             "name": "d11wtq/boris",
@@ -46,12 +46,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/letsdrink/ouzo.git",
-                "reference": "7209ecc82b9a67525ef67e7708607b34d3aca278"
+                "reference": "4d40410bca2ffaf3b128be0010e782277c087f6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/7209ecc82b9a67525ef67e7708607b34d3aca278",
-                "reference": "7209ecc82b9a67525ef67e7708607b34d3aca278",
+                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/4d40410bca2ffaf3b128be0010e782277c087f6e",
+                "reference": "4d40410bca2ffaf3b128be0010e782277c087f6e",
                 "shasum": ""
             },
             "require": {
@@ -88,7 +88,7 @@
                 "orm",
                 "php"
             ],
-            "time": "2014-12-14 21:25:42"
+            "time": "2014-12-16 15:11:36"
         },
         {
             "name": "ruckusing/ruckusing-migrations",
@@ -208,12 +208,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "523aef76d0fa29c18bf42264e88fc9b58acf825c"
+                "reference": "c54d6f93e3c5838092363447498ecb366e1e60a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/523aef76d0fa29c18bf42264e88fc9b58acf825c",
-                "reference": "523aef76d0fa29c18bf42264e88fc9b58acf825c",
+                "url": "https://api.github.com/repos/composer/composer/zipball/c54d6f93e3c5838092363447498ecb366e1e60a2",
+                "reference": "c54d6f93e3c5838092363447498ecb366e1e60a2",
                 "shasum": ""
             },
             "require": {
@@ -268,7 +268,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2014-12-14 13:46:37"
+            "time": "2014-12-16 14:28:51"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -485,6 +485,7 @@
         "composer/composer": 20
     },
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": [],
     "platform-dev": []
 }
