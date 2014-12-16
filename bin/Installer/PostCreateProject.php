@@ -2,7 +2,6 @@
 namespace Installer;
 
 use Composer\Script\Event;
-use Ouzo\Utilities\Path;
 
 class PostCreateProject
 {
@@ -66,16 +65,16 @@ class PostCreateProject
             $db_name = self::_prepareNewDbName(basename($path));
             $newDbName = $conf == 'test' ? $db_name . '_test' : $db_name;
 
-            $dir = Path::join($path, 'db', 'sqlite');
+            $dir = self::_createPath($path, 'db', 'sqlite');
             if (!file_exists($dir)) {
                 mkdir($dir);
                 chmod($dir, 0777);
             }
 
-            $dbNameWithPath = Path::join($path, 'db', 'sqlite', $newDbName);
+            $dbNameWithPath = self::_createPath($path, 'db', 'sqlite', $newDbName);
             self::_replaceValue($path, $conf, 'sqlite:ouzo_test', 'sqlite:' . $dbNameWithPath);
 
-            $source = Path::join(__DIR__, 'stubs', 'sqlite3_db');
+            $source = self::_createPath(__DIR__, 'stubs', 'sqlite3_db');
             copy($source, $dbNameWithPath);
             chmod($dbNameWithPath, 0777);
         }
@@ -83,11 +82,11 @@ class PostCreateProject
 
     private static function _copyConfig($path, $type)
     {
-        $sourceProd = Path::join(__DIR__, 'stubs', $type . '.prod.config.php.stub');
-        $sourceTest = Path::join(__DIR__, 'stubs', $type . '.test.config.php.stub');
+        $sourceProd = self::_createPath(__DIR__, 'stubs', $type . '.prod.config.php.stub');
+        $sourceTest = self::_createPath(__DIR__, 'stubs', $type . '.test.config.php.stub');
 
-        $destinationProd = Path::join($path, 'config', 'prod', 'config.php');
-        $destinationTest = Path::join($path, 'config', 'test', 'config.php');
+        $destinationProd = self::_createPath($path, 'config', 'prod', 'config.php');
+        $destinationTest = self::_createPath($path, 'config', 'test', 'config.php');
         copy($sourceProd, $destinationProd);
         copy($sourceTest, $destinationTest);
     }
@@ -128,16 +127,21 @@ class PostCreateProject
         $package = $event->getComposer()->getPackage();
         $path = $event->getComposer()->getInstallationManager()->getInstallPath($package);
         $standardPath = str_replace(array('\\', '/'), DIRECTORY_SEPARATOR, $path);
-        $replacement = Path::join('vendor', 'letsdrink', 'ouzo-app');
+        $replacement = self::_createPath('vendor', 'letsdrink', 'ouzo-app');
         $path = str_replace($replacement, '', $standardPath);
         return $path;
     }
 
     private static function _replaceValue($path, $conf, $search, $replacement)
     {
-        $configPath = Path::join($path, 'config', $conf, 'config.php');
+        $configPath = self::_createPath($path, 'config', $conf, 'config.php');
         $config = file_get_contents($configPath);
         $configReplaced = str_replace($search, $replacement, $config);
         file_put_contents($configPath, $configReplaced);
+    }
+
+    private static function _createPath()
+    {
+        return preg_replace('~[/\\\]+~', DIRECTORY_SEPARATOR, implode(DIRECTORY_SEPARATOR, func_get_args()));
     }
 }
