@@ -9,7 +9,7 @@ Set up project
 Simply use composer (http://getcomposer.org):
 
 ```
-composer.phar create-project letsdrink/ouzo-app:dev-master myproject
+composer.phar create-project letsdrink/ouzo-app:1.3 myproject
 ```
 
 Where `myproject` is your project's name.
