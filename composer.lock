@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "372bbfdab45eea443c63c5b12dcc16be",
+    "hash": "0d3959b61216bebbcb9d69df81a7ecd1",
     "packages": [
         {
             "name": "d11wtq/boris",
@@ -42,21 +42,24 @@
         },
         {
             "name": "letsdrink/ouzo",
-            "version": "1.3",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/letsdrink/ouzo.git",
-                "reference": "bcc5ddd4c63785ee7d36dd3858afdcc2ba85e16b"
+                "reference": "9ab5adacff4af9a9f5e8cc05ab1d72e7dad55910"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/bcc5ddd4c63785ee7d36dd3858afdcc2ba85e16b",
-                "reference": "bcc5ddd4c63785ee7d36dd3858afdcc2ba85e16b",
+                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/9ab5adacff4af9a9f5e8cc05ab1d72e7dad55910",
+                "reference": "9ab5adacff4af9a9f5e8cc05ab1d72e7dad55910",
                 "shasum": ""
             },
             "require": {
                 "d11wtq/boris": "1.0.8",
                 "symfony/console": "2.5.7"
+            },
+            "replace": {
+                "letsdrink/ouzo-goodies": "self.version"
             },
             "require-dev": {
                 "phpunit/phpunit": "4.3.3",
@@ -65,7 +68,10 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Ouzo\\": "src/Ouzo/",
+                    "Ouzo\\": [
+                        "src/Ouzo/Core",
+                        "src/Ouzo/Goodies"
+                    ],
                     "Command\\": "bin/"
                 }
             },
@@ -88,7 +94,7 @@
                 "orm",
                 "php"
             ],
-            "time": "2014-12-16 16:44:26"
+            "time": "2014-12-30 11:25:48"
         },
         {
             "name": "ruckusing/ruckusing-migrations",
@@ -208,12 +214,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "c54d6f93e3c5838092363447498ecb366e1e60a2"
+                "reference": "095dc6129550de93cd98170c8e6c6ccd4558e983"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/c54d6f93e3c5838092363447498ecb366e1e60a2",
-                "reference": "c54d6f93e3c5838092363447498ecb366e1e60a2",
+                "url": "https://api.github.com/repos/composer/composer/zipball/095dc6129550de93cd98170c8e6c6ccd4558e983",
+                "reference": "095dc6129550de93cd98170c8e6c6ccd4558e983",
                 "shasum": ""
             },
             "require": {
@@ -268,7 +274,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2014-12-16 14:28:51"
+            "time": "2014-12-29 20:29:13"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -389,12 +395,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "5f69e63177e3cb369040f3facbb21bb87da114bc"
+                "reference": "3163e335375f3433569996fd68c89887e4a82d29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/5f69e63177e3cb369040f3facbb21bb87da114bc",
-                "reference": "5f69e63177e3cb369040f3facbb21bb87da114bc",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/3163e335375f3433569996fd68c89887e4a82d29",
+                "reference": "3163e335375f3433569996fd68c89887e4a82d29",
                 "shasum": ""
             },
             "require": {
@@ -427,7 +433,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2014-12-12 16:23:01"
+            "time": "2014-12-22 16:45:18"
         },
         {
             "name": "symfony/process",
@@ -436,12 +442,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "e48a06acc112f2b76d6e5ac7e7eaa01a9305d146"
+                "reference": "c316c54663c78a4dd87c4e75d7281091169197d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/e48a06acc112f2b76d6e5ac7e7eaa01a9305d146",
-                "reference": "e48a06acc112f2b76d6e5ac7e7eaa01a9305d146",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/c316c54663c78a4dd87c4e75d7281091169197d7",
+                "reference": "c316c54663c78a4dd87c4e75d7281091169197d7",
                 "shasum": ""
             },
             "require": {
@@ -474,7 +480,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2014-12-12 16:23:01"
+            "time": "2014-12-30 09:05:46"
         }
     ],
     "aliases": [],
