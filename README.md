@@ -1,6 +1,8 @@
 Ouzo - 5 minutes tutorial
 =========================
 
+[![Build Status](https://travis-ci.org/letsdrink/ouzo-app.svg?branch=1.4.0)](https://travis-ci.org/letsdrink/ouzo-app)
+
 How to use Ouzo step by step. It takes only 5 minutes to set up sample project and start experiencing Ouzo.
 
 Set up project
