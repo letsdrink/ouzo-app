@@ -128,7 +128,7 @@ More
 ----
 
 Skeleton app explained:
-https://github.com/letsdrink/ouzo/wiki/Skeleton-app-explained
+http://ouzo.readthedocs.org/en/latest/tutorials/project_structure_explained.html
 
 Ouzo documentation:
 https://github.com/letsdrink/ouzo/wiki
