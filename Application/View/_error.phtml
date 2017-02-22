@@ -1,0 +1,59 @@
+<meta charset="utf-8"/>
+
+<style>
+    body.error {
+        background: none repeat scroll 0 0 #f4f4f4;
+        border: 0 none;
+        font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        color: #555;
+    }
+
+    .content {
+        margin: 7em auto 0 auto;
+        text-align: center;
+        background-color: #E7E7E7;
+        padding-bottom: 20px;
+    }
+
+    .message {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    .error-id {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    .title {
+        top: 20%;
+        font-size: 100px;
+        margin-bottom: 30px;
+
+        color: #d9534f;
+        font-weight: 300;
+        letter-spacing: -10px;
+    }
+    .trace {
+        text-align: left;
+        display: inline-block;
+    }
+</style>
+<body class="error">
+<div class="content">
+    <div class="title">Oops, <?php echo $httpCode?>!</div>
+    <div class="message">There was an error.</div>
+    <div class="error-id">ID: <?= \Ouzo\FrontController::$requestId ?></div>
+    <?php if (\Ouzo\Config::getValue('debug')): ?>
+        <div>
+            <p>Message: <strong><?php echo $errorMessage; ?></strong></p>
+            <div class="trace">
+                Trace:
+                <pre><?php echo trim($errorTrace); ?></pre>
+            </div>
+        </div>
+    <?php endif; ?>
+</div>
+</body>
