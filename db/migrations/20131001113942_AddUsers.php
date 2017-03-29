@@ -10,10 +10,7 @@ class AddUsers extends Ruckusing_Migration_Base
         $users->finish();
     }
 
-    //up()
-
     public function down()
     {
     }
-    //down()
 }
