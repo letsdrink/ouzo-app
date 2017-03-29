@@ -22,7 +22,7 @@ PHP Version
 -----------
 
 You need:
-* PHP 5.3 or later installed. Currently Ouzo is tested on 5.3, 5.4, 5.5 and 5.6 environments.
+* PHP 6.3 or later installed. Currently Ouzo is tested on 5.6, 7.0, and 7.1 environments.
 * Database driver, accordingly to the database your are using.
 
 In order to get list of available drivers check http://www.php.net/manual/en/pdo.getavailabledrivers.php.
