@@ -23,9 +23,9 @@ class UsersControllerTest extends ControllerTestCase
     public function shouldRenderFreshWhenValidationFailedInCreate()
     {
         //when
-        $this->post('/users', array('user' => array(
+        $this->post('/users', ['user' => [
             'login' => ''
-        )));
+        ]]);
 
         //then
         $this->assertRenders('Users/fresh');
@@ -37,9 +37,9 @@ class UsersControllerTest extends ControllerTestCase
     public function shouldRedirectToIndexOnSuccessInCreate()
     {
         //when
-        $this->post('/users', array('user' => array(
+        $this->post('/users', ['user' => [
             'login' => 'login'
-        )));
+        ]]);
 
         //then
         $this->assertRedirectsTo(usersPath());
@@ -51,12 +51,12 @@ class UsersControllerTest extends ControllerTestCase
     public function shouldCreateUser()
     {
         //when
-        $this->post('/users', array('user' => array(
+        $this->post('/users', ['user' => [
             'login' => 'login'
-        )));
+        ]]);
 
         //then
-        $this->assertNotNull(User::where(array('login' => 'login'))->fetch());
+        $this->assertNotNull(User::where(['login' => 'login'])->fetch());
     }
 
     /**
@@ -64,12 +64,12 @@ class UsersControllerTest extends ControllerTestCase
      */
     public function shouldRenderEditWhenValidationFailedInUpdate()
     {
-        $user = User::create(array('login' => 'login'));
+        $user = User::create(['login' => 'login']);
 
         //when
-        $this->put("/users/{$user->id}", array('user' => array(
+        $this->put("/users/{$user->id}", ['user' => [
             'login' => ''
-        )));
+        ]]);
 
         //then
         $this->assertRenders('Users/edit');
@@ -81,12 +81,12 @@ class UsersControllerTest extends ControllerTestCase
     public function shouldRedirectToShowOnSuccessInUpdate()
     {
         //given
-        $user = User::create(array('login' => 'login'));
+        $user = User::create(['login' => 'login']);
 
         //when
-        $this->put("/users/{$user->id}", array('user' => array(
+        $this->put("/users/{$user->id}", ['user' => [
             'login' => 'new login'
-        )));
+        ]]);
 
         //then
         $this->assertRedirectsTo(userPath($user->id));
@@ -98,12 +98,12 @@ class UsersControllerTest extends ControllerTestCase
     public function shouldUpdateUser()
     {
         //given
-        $user = User::create(array('login' => 'login'));
+        $user = User::create(['login' => 'login']);
 
         //when
-        $this->put("/users/{$user->id}", array('user' => array(
+        $this->put("/users/{$user->id}", ['user' => [
             'login' => 'new login'
-        )));
+        ]]);
 
         //then
         $this->assertEquals('new login', $user->reload()->login);
@@ -115,7 +115,7 @@ class UsersControllerTest extends ControllerTestCase
     public function shouldShowUser()
     {
         //given
-        $user = User::create(array('login' => 'login'));
+        $user = User::create(['login' => 'login']);
 
         //when
         $this->get("/users/{$user->id}");

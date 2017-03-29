@@ -11,12 +11,12 @@ class UserTest extends DbTransactionalTestCase
     public function shouldPersistUser()
     {
         //given
-        $user = new User(array('login' => 'user1', 'password' => 'abc'));
+        $user = new User(['login' => 'user1', 'password' => 'abc']);
 
         //when
         $user->insert();
 
         //then
-        $this->assertEquals($user, User::where(array('login' => 'user1'))->fetch());
+        $this->assertEquals($user, User::where(['login' => 'user1'])->fetch());
     }
 }

@@ -1,6 +1,6 @@
-<?php echo renderPartial('Users/_form', array(
+<?php echo renderPartial('Users/_form', [
     'user' => $this->user,
     'url' => userPath($this->user->id),
     'method' => 'PUT',
     'title' => 'Edit user'
-));?>
+]);?>

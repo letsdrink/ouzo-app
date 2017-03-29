@@ -1,4 +1,9 @@
 {
+    "config": {
+        "platform": {
+            "php": "5.6.0"
+        }
+    },
     "name": "letsdrink/ouzo-app",
     "description": "Ouzo framework application skeleton",
     "minimum-stability": "dev",
@@ -10,8 +15,8 @@
         }
     ],
     "require": {
-        "letsdrink/ouzo": "1.6.0",
-        "phpunit/phpunit": "4.3.3",
+        "letsdrink/ouzo": "dev-master",
+        "phpunit/phpunit": "5.7.*",
         "ruckusing/ruckusing-migrations": "1.0.3"
     },
     "require-dev": {

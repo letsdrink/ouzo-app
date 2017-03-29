@@ -5,11 +5,11 @@ use Ouzo\Model;
 
 class User extends Model
 {
-    function __construct($attributes = array())
+    function __construct($attributes = [])
     {
-        parent::__construct(array(
+        parent::__construct([
             'attributes' => $attributes,
-            'fields' => array('login', 'password')));
+            'fields' => ['login', 'password']]);
     }
 
     public function validate()

@@ -9,7 +9,7 @@ if (\Ouzo\Config::getValue('debug')) {
         <div id="stats"></div>
     </div>
     <script>
-        var url = "<?php echo url(array('controller' => 'stats', 'action' => 'show')); ?>";
+        var url = "<?php echo url(['controller' => 'stats', 'action' => 'show']); ?>";
 
         function reloadStats() {
             $.get(url, function (data) {

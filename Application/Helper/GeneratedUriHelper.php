@@ -1,25 +1,25 @@
 <?php
 function indexUsersPath()
 {
-    return url(array('string' => "/"));
+    return url(['string' => "/"]);
 }
 
 function usersPath()
 {
-    return url(array('string' => "/users"));
+    return url(['string' => "/users"]);
 }
 
 function freshUserPath()
 {
-    return url(array('string' => "/users/fresh"));
+    return url(['string' => "/users/fresh"]);
 }
 
 function editUserPath($id)
 {
-    return url(array('string' => "/users/$id/edit"));
+    return url(['string' => "/users/$id/edit"]);
 }
 
 function userPath($id)
 {
-    return url(array('string' => "/users/$id"));
+    return url(['string' => "/users/$id"]);
 }

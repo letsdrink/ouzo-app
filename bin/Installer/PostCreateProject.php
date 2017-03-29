@@ -18,7 +18,7 @@ class PostCreateProject
         $code = $event->getIO()->ask("Choose [1], 2 or 3: ", '1');
         $translated = self::_translateDbCode($code);
 
-        if (in_array($code, array(1, 2, 3))) {
+        if (in_array($code, [1, 2, 3])) {
             $event->getIO()->write("<info>Setting up $translated Done!</info>");
             $path = self::_getPath($event);
             self::_prepareToCopyConfig($code, $path);
@@ -126,7 +126,7 @@ class PostCreateProject
     {
         $package = $event->getComposer()->getPackage();
         $path = $event->getComposer()->getInstallationManager()->getInstallPath($package);
-        $standardPath = str_replace(array('\\', '/'), DIRECTORY_SEPARATOR, $path);
+        $standardPath = str_replace(['\\', '/'], DIRECTORY_SEPARATOR, $path);
         $replacement = self::_createPath('vendor', 'letsdrink', 'ouzo-app');
         $path = str_replace($replacement, '', $standardPath);
         return $path;
