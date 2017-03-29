@@ -1,8 +1,8 @@
 <?php
 
-return array(
-    'user' => array(
+return [
+    'user' => [
         'login' => 'login',
         'password' => 'password'
-    )
-);
+    ]
+];
